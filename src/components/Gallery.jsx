@@ -104,7 +104,7 @@ class Gallery1 extends Component {
       
       <Container>
     
-  <Holder data-aos='slide-up'> 
+  <Holder data-aos='slide-left'> 
  
       <HolderInner>
       <a href="https://kkwe.co.za/" target="_blank" rel="noopener noreferrer">
@@ -120,7 +120,7 @@ class Gallery1 extends Component {
   
           </Holder>
          
-          <Holder data-aos='slide-up'> 
+          <Holder data-aos='slide-right'> 
  
  <HolderInner>
  <a href="https://zeus540.github.io/react-firebase-crud-app/" target="_blank" rel="noopener noreferrer">
@@ -141,7 +141,7 @@ VIEW CODE
 
      </Holder>
 
-     <Holder data-aos='slide-up'> 
+     <Holder data-aos='slide-left'> 
  
  <HolderInner>
  <a href="https://FunFox.co.uk/" target="_blank" rel="noopener noreferrer">
@@ -159,7 +159,7 @@ VIEW CODE
 
  
 
-<Holder data-aos='slide-up'> 
+<Holder data-aos='slide-right'> 
 
 <HolderInner>
 <a href="https://zaheer.netlify.com" target="_blank" rel="noopener noreferrer">
@@ -180,7 +180,7 @@ VIEW CODE
 
 </Holder>
 
-     <Holder data-aos='slide-up'> 
+     <Holder data-aos='slide-left'> 
  
  <HolderInner>
  <a href="https://rottweileraddicts.netlify.app/" target="_blank" rel="noopener noreferrer">
@@ -202,7 +202,7 @@ VIEW CODE
      </Holder>
 
      
-     <Holder data-aos='slide-up'> 
+     <Holder data-aos='slide-right'> 
  
  <HolderInner>
  <a href="https://nikegallery.netlify.app/" target="_blank" rel="noopener noreferrer">

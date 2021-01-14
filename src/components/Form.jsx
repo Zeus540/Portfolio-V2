@@ -47,12 +47,23 @@ color:white;
 font-family:arial;
 text-align:center;
 font-weight:bolder;
+overflow:hidden
     margin: 15vw 0% 15vw 0%;
 @media (min-width: 1px) and (max-width: 426px) {
   font-size: 10vw;
   margin: 15vw 0% 15vw 0%;
    }
 `
+
+const MainHeadingContainer = styled.div`
+  overflow: hidden;
+
+      @media (min-width: 1px) and (max-width: 426px) {
+    
+        
+        }
+  `
+
   class Form extends Component {
     componentDidMount(){
       AOS.init({
@@ -64,7 +75,9 @@ font-weight:bolder;
       return (
         
         <Container >
-          <MainHeading>HIGHLIGHTS</MainHeading>
+          <MainHeadingContainer>
+          <MainHeading data-aos='slide-up'>HIGHLIGHTS</MainHeading>
+          </MainHeadingContainer>
         <div className="timeline" >
   
     <div className="container left"  data-aos='slide-up'>
