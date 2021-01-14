@@ -38,7 +38,7 @@ const  HolderInner = styled.div`
 display:flex;
 
 padding-bottom: 0px;
-flex-direction:column;
+flex-direction:row;
 width:100%;
 
 @media (min-width: 1px) and (max-width: 426px) {
@@ -81,11 +81,11 @@ height:100%
 `
 const ImgHolder =styled.div`
 width:60vw;
-height:100%
+
  
 @media (min-width: 1px) and (max-width: 426px) {
   width:100%;
-  height:100%
+
  }
 `
 
