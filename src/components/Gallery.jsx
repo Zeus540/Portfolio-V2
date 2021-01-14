@@ -38,7 +38,7 @@ const  HolderInner = styled.div`
 display:flex;
 
 padding-bottom: 0px;
-flex-direction:row;
+flex-direction:column;
 width:100%;
 
 @media (min-width: 1px) and (max-width: 426px) {
@@ -127,7 +127,11 @@ class Gallery1 extends Component {
 <Heading  >WEBSITE</Heading>
 <Heading  >REACT.JS - SCSS </Heading>
 </a>
-
+<Heading  >
+<a href="https://zeus540.github.io/react-firebase-crud-app/" target="_blank" rel="noopener noreferrer">
+VIEW CODE
+</a>
+</Heading>
 </HolderInner>
 <ImgHolder>
 <Img src={Crud} alt=""/>
