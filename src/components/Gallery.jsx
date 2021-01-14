@@ -13,6 +13,7 @@ import 'aos/dist/aos.css';
 const Container = styled.div`
 height: 100%;
 margin:0 auto;
+overflow:hidden;
 @media (min-width: 1px) and (max-width: 426px) {
   margin-bottom:20vw;
   width: 80%;
