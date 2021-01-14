@@ -40,7 +40,7 @@ margin: 5vw 0% 5vw 5vw;
 @media (min-width: 1px) and (max-width: 426px) {
   padding-left: 5vw;
   font-size: 7vw;
-  margin: 10vw 0% 10vw 0%;
+  margin: 20vw 0% 20vw 0%;
    }
    
 `
@@ -84,7 +84,7 @@ margin:0px;
 font-size:2vw;
 font-weight:bolder;
 @media (min-width: 1px) and (max-width: 426px) {
-  font-size:5vw; 
+  font-size:6vw; 
    }
 `
 
@@ -95,7 +95,7 @@ font-family:arial;
 margin:2vw 0%;
 font-weight:bolder;
 @media (min-width: 1px) and (max-width: 426px) {
-  font-size:10vw; 
+  font-size:11vw; 
    }
 `
 
@@ -191,7 +191,7 @@ render() {
       <Container id="Home">
         <TypicalHolder>
         <Typical
-              steps={['Hello!', 1000,'Hola!',1000,'Bonjour!',1000,'Konnichiwa!',1000,'God dag!',1000,'Shalom!',1000]}
+              steps={['Hello!', 1000,'Hola!',1000,'Bonjour!',1000,'Konnichiwa!',1000,'God dag!',1000,'Shalom!',1000,]}
               loop={Infinity}
               wrapper={"h1"}
             />

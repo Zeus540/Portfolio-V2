@@ -6,6 +6,7 @@ import Crud from '../images/Crud.png'
 import FunFox from '../images/FunFox.png'
 import Port from '../images/Port.png'
 import Rot from '../images/Rot.png'
+import Nike from '../images/Nike.png'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -128,7 +129,7 @@ class Gallery1 extends Component {
 <Heading  >REACT.JS - SCSS </Heading>
 </a>
 <Heading  >
-<a href="https://zeus540.github.io/react-firebase-crud-app/" target="_blank" rel="noopener noreferrer">
+<a href="https://github.com/Zeus540/react-firebase-crud-app" target="_blank" rel="noopener noreferrer">
 VIEW CODE
 </a>
 </Heading>
@@ -166,6 +167,11 @@ VIEW CODE
 <Heading  >WEBSITE</Heading>
 <Heading  >REACT.JS </Heading>
 </a>
+<Heading  >
+<a href="https://github.com/Zeus540/Portfolio-V1" target="_blank" rel="noopener noreferrer">
+VIEW CODE
+</a>
+</Heading>
 </HolderInner>
 <ImgHolder>
 <Img src={Port} alt=""/>
@@ -182,9 +188,36 @@ VIEW CODE
 <Heading  >WEBSITE </Heading>
 <Heading  >HTML - CSS GRID - JAVASCRIPT </Heading>
 </a>
+<Heading  >
+<a href="https://github.com/Zeus540/Rottweiler" target="_blank" rel="noopener noreferrer">
+VIEW CODE
+</a>
+</Heading>
 </HolderInner>
 <ImgHolder>
 <Img src={Rot} alt=""/>
+</ImgHolder>
+
+
+     </Holder>
+
+     
+     <Holder data-aos='slide-up'> 
+ 
+ <HolderInner>
+ <a href="https://nikegallery.netlify.app/" target="_blank" rel="noopener noreferrer">
+ <ProjectHeading  >Nike AF1 Gallery</ProjectHeading>
+<Heading  >WEBSITE</Heading>
+<Heading  >REACT.JS</Heading>
+</a>
+<Heading  >
+<a href="https://github.com/Zeus540/Nike" target="_blank" rel="noopener noreferrer">
+VIEW CODE
+</a>
+</Heading>
+</HolderInner>
+<ImgHolder>
+<Img src={Nike} alt=""/>
 </ImgHolder>
 
 

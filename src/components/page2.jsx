@@ -50,7 +50,7 @@ justify-content:center;
 
 const Focus =styled.h1`
 font-size:15vw;
-color:lime;
+color:#8BC34A;
 margin:0px;
 font-family:arial;
 @media (min-width: 1px) and (max-width: 426px) {

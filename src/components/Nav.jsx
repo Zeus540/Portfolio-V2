@@ -33,7 +33,7 @@ font-size:1.5vw;
 `
 
 const Heading2 = styled.h1`
-color:lime;
+color:#8BC34A;
 font: italic
 font-family:arial;
 text-transform:uppercase;
