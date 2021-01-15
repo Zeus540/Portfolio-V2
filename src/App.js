@@ -5,7 +5,7 @@ import Nav from './components/Nav.jsx'
 import Social from './components/Social.jsx'
 import Gallery1 from './components/Gallery.jsx'
 import Form from './components/Form.jsx'
-
+import './App.css';
 function App() {
 
   return (
