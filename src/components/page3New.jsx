@@ -15,11 +15,11 @@ position:relative;
 `
 
 const Holder = styled.div`
-width: 33vw;
+width: 40vw;
 overflow:hidden;
 margin:0px;
 position: relative;
-margin: 5vw 0% 5vw 5vw;
+margin: 0vw 0% 5vw 5vw;
 @media (min-width: 1px) and (max-width: 426px) {
   width: 84%;
   padding: 5vw;
@@ -117,12 +117,19 @@ letter-spacing: 1px;
 line-height:1.7vw;
 font-family:arial;
 margin:2vw 0% 0% 0%;
-
 @media (min-width: 1px) and (max-width: 426px) {
   font-size: 4vw;
   line-height: 7vw;
-
    }
+
+   @media (min-width: 426px) and (max-width: 1024px) {
+    font-size: 1.5vw;
+    line-height: 3vw;
+     }
+     @media (min-width: 769px) and (max-width: 1440px) {
+      font-size: 1.2vw;
+      line-height: 2vw;
+       }
 `
 const Focus =styled.span`
 font-size:9vw;

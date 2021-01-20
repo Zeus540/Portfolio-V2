@@ -27,6 +27,16 @@
     line-height: 5vw;
 
     }
+    
+   @media (min-width: 426px) and (max-width: 768px) {
+    font-size: 1.5vw;
+    line-height: 3vw;
+     }
+
+     @media (min-width: 769px) and (max-width: 1440px) {
+      font-size: 1.2vw;
+      line-height: 2vw;
+       }
   `
 
   const Heading =styled.h1`
@@ -82,27 +92,42 @@ const MainHeadingContainer = styled.div`
   
     <div className="container left"  data-aos='slide-up'>
       <div className="content">
-        <Heading>2015</Heading>
-        <Para>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</Para>
+        <Heading>2021</Heading>
+        <Para>BECAME A FREELANCER</Para>
       </div>
     </div>
 
     <div className="container right"  data-aos='slide-up'>
       <div className="content">
         <Heading>2020</Heading>
-        <Para>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</Para>
+        <Para>BUILT A WEBSITE FOR A SMALL BUSINESS</Para>
       </div>
     </div>
-    <div className="container left" data-aos='slide-up'>
-      <div className="content">
+    <div className="container leftImp" data-aos='slide-up'>
+      <div className="content Green">
         <Heading>2019</Heading>
-        <Para>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</Para>
+        <Para>STARTED WORKING AT DIGITAS LIQUORICE</Para>
+      </div>
+    </div>
+    <div className="container leftImp" data-aos='slide-up'>
+      <div className="content Green">
+        <Para>WORKED ON PURITY</Para>
+      </div>
+    </div>
+    <div className="container leftImp" data-aos='slide-up'>
+      <div className="content Green">
+        <Para>WORKED ON UNILEVER </Para>
+      </div>
+    </div>
+    <div className="container leftImp" data-aos='slide-up'>
+      <div className="content Green">
+        <Para>WORKED ON OLA BARBIE CAMPAIGN </Para>
       </div>
     </div>
     <div className="container right"  data-aos='slide-up'>
-      <div className="content">
+      <div className="content ">
         <Heading>2018</Heading>
-        <Para>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</Para>
+        <Para>GRADUATED COLLEGE</Para>
       </div>
     </div>
   </div>
