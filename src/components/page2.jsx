@@ -70,7 +70,7 @@ render() {
  
     return (
       
-      <Container  id="gallery">
+      <Container id="Projects">
         <TextHolder>
           <Focus data-aos='slide-up' data-aos-duration="1200"> 0</Focus>
           <Focus data-aos='slide-up' data-aos-duration="1400"> 2</Focus>

@@ -6,7 +6,7 @@ import Crud from '../images/Crud.png'
 import FunFox from '../images/FunFox.png'
 import Port from '../images/Port.png'
 import Rot from '../images/Rot.png'
-import Nike from '../images/Nike.png'
+import Nike from '../images/Nike.gif'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -14,9 +14,10 @@ const Container = styled.div`
 height: 100%;
 margin:0 auto;
 overflow:hidden;
+width: 80vw;
 @media (min-width: 1px) and (max-width: 426px) {
   margin-bottom:20vw;
-  width: 80%;
+  width: 80vw;
   }
 `
 
@@ -27,7 +28,7 @@ padding-bottom: 0px;
 flex-direction:row;
 width:80vw;
 height: inherit;
-margin: 10vw 10vw;
+margin: 10vw 0vw;
 @media (min-width: 1px) and (max-width: 426px) {
  width:100%;
  display: flex;
@@ -38,11 +39,9 @@ margin: 10vw 10vw;
 
 const  HolderInner = styled.div`
 display:flex;
-
 padding-bottom: 0px;
 flex-direction:column;
 width:100%;
-
 @media (min-width: 1px) and (max-width: 426px) {
   margin: 8vw 0vw 0.5vw 0vw;
   flex-direction:column;
@@ -66,7 +65,6 @@ font-size:1vw;
 color:white;
 font-family:arial;
 margin: 0.5vw 0vw 0.5vw 0.5vw;
-
 @media (min-width: 1px) and (max-width: 426px) {
   font-size: 3.5vw;
  }
@@ -74,7 +72,6 @@ margin: 0.5vw 0vw 0.5vw 0.5vw;
 const Img =styled.img`
 width:100%;
 height:100%
- 
 @media (min-width: 1px) and (max-width: 426px) {
   margin-top:5vw; 
   width:100%;
@@ -83,8 +80,6 @@ height:100%
 `
 const ImgHolder =styled.div`
 width:60vw;
-
- 
 @media (min-width: 1px) and (max-width: 426px) {
   width:100%;
 
@@ -99,11 +94,9 @@ class Gallery1 extends Component {
   }
   render() {
 
-   
-
     return (
       
-      <Container>
+      <Container >
     
   <Holder data-aos='slide-left'> 
  
@@ -219,6 +212,7 @@ VIEW CODE
 </HolderInner>
 <ImgHolder>
 <Img src={Nike} alt=""/>
+
 </ImgHolder>
 
 

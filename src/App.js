@@ -4,7 +4,9 @@ import Page3New from './components/page3New.jsx'
 import Nav from './components/Nav.jsx'
 import Social from './components/Social.jsx'
 import Gallery1 from './components/Gallery.jsx'
-import Form from './components/Form.jsx'
+import TimeLine from './components/TimeLine.jsx'
+import Contact from './components/contact.jsx'
+import Footer from './components/footer.jsx'
 
 function App() {
 
@@ -15,7 +17,9 @@ function App() {
         <Page2/>
         <Gallery1/>
         <Social/>
-        <Form/>
+        <TimeLine/>
+        <Contact/>
+        <Footer/>
     </div>
   );
 }

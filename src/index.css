@@ -48,7 +48,7 @@ table {
 }
 
 html{
-    background:#1f1f1f;
+    background:#131313;
     overflow-x:hidden;
     height: 100%;
     width: 100%;
@@ -72,7 +72,7 @@ body::-webkit-scrollbar {
     width: .75rem;
 }
 *::-webkit-scrollbar-track {
-    background-color: #1f1f1f;
+    background-color: #131313;
 }
 *::-webkit-scrollbar-thumb {
     background-color: #8BC34A;
@@ -172,7 +172,7 @@ a:hover{
     top: 22px;
     width: 0;
     z-index: 1;
-    right: 30px;
+    right: 31px;
     border: medium solid white;
     border-width: 10px 0 10px 10px;
     border-color: transparent transparent transparent white;
@@ -184,7 +184,7 @@ a:hover{
     top: 22px;
     width: 0;
     z-index: 1;
-    right: 30px;
+    right: 31px;
     border: medium solid #8BC34A;
     border-width: 10px 0 10px 10px;
     border-color: transparent transparent transparent #8BC34A;
@@ -197,7 +197,7 @@ a:hover{
     top: 22px;
     width: 0;
     z-index: 1;
-    left: 30px;
+    left: 31px;
     border: medium solid white;
     border-width: 10px 10px 10px 0;
     border-color: transparent white transparent transparent;
@@ -232,12 +232,17 @@ a:hover{
 
     /* Make sure that all arrows are pointing leftwards */
     .container::before {
-    left: 60px;
+    left: 61px;
     border: medium solid limewhite;
     border-width: 10px 10px 10px 0;
     border-color: transparent white transparent transparent;
     }
-
+    .leftContainer::before {
+      left: 61px;
+      border: medium solid #8bc34a;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent #8bc34a transparent transparent;
+      }
     /* Make sure all circles are at the same spot */
     .left::after, .right::after {
     left: 15px;

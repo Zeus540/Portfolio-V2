@@ -39,7 +39,7 @@ color:white;
 margin: 5vw 0% 5vw 5vw;
 @media (min-width: 1px) and (max-width: 426px) {
   padding-left: 5vw;
-  font-size: 7vw;
+  font-size: 6vw;
   margin: 20vw 0% 20vw 0%;
    }
    

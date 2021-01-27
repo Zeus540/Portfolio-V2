@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
+import {Link} from "react-scroll";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -10,14 +11,16 @@ justify-content: space-between;
 padding:5vw;
 padding-top:0vw;
 padding-bottom:2vw;
+
 `
 
 const Holder = styled.div`
-
+overflow:hidden
 font: italic
 font-family:arial;
 text-transform:uppercase;
 letter-spacing:5px;
+
 `
 
 const Heading = styled.h1`
@@ -28,7 +31,7 @@ text-transform:uppercase;
 letter-spacing:5px;
 font-size:1.5vw;
 @media (min-width: 1px) and (max-width: 426px) {
-  font-size:2vw;
+  font-size:3.4vw;
  }
 `
 
@@ -40,9 +43,12 @@ text-transform:uppercase;
 letter-spacing:5px;
 font-size:1.5vw;
 @media (min-width: 1px) and (max-width: 426px) {
-  font-size:2vw;
+  font-size:3.4vw;
  }
 `
+
+
+
 class Nav extends Component {
   componentDidMount(){
     AOS.init({
@@ -55,18 +61,37 @@ render() {
       
       <Container id="Home">
 
-          <Holder  data-aos='fade-down'>
-          <Heading>Personal Website</Heading>
+          <Holder  >
+          <Link 
+        activeClass="active"
+        to="Projects"
+        spy={true}
+        smooth={true}
+        offset={-30}
+        duration= {1000}
+        ><Heading data-aos='slide-right'>Projects</Heading>
+        
+      </Link>
           </Holder>
-
+        
           <Holder  data-aos='fade-down'>
           <Heading> </Heading>
           </Holder>
 
-          <Holder data-aos='fade-down'>
-            <a href="mailto:zaheerroberts4@gmail.com">
-          <Heading2>Work with me</Heading2>
-          </a>
+          <Holder >
+
+          <Link 
+        activeClass="active"
+        to="Contact"
+        spy={true}
+        smooth={true}
+        offset={20}
+        duration= {2000}
+        ><Heading2 data-aos='slide-left'>Work with me</Heading2>
+        
+      </Link>
+          
+        
           </Holder>
 
       </Container>
