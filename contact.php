@@ -45,7 +45,7 @@ if(get_magic_quotes_gpc()) {
 // Enter the email address that you want to emails to be sent to.
 // Example $address = "hello@yourdomain.com";
 
-$address = "hello@kkwe.co.za , busi@kkwe.co.za";
+$address = "zaheerroberts4@gmail.com ";
 
 
 // Configuration option.
@@ -53,7 +53,7 @@ $address = "hello@kkwe.co.za , busi@kkwe.co.za";
 
 // Example, $e_subject = '$name . ' has contacted you via Your Website.';
 
-$e_subject = 'kkwe.co.za contact form: You\'ve been contacted by ' . $name . '.';
+$e_subject = 'zaheerroberts.co.za contact form: You\'ve been contacted by ' . $name . '.';
 
 
 // Configuration option.
