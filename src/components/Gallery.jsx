@@ -6,7 +6,7 @@ import Crud from '../images/Crud.png'
 import FunFox from '../images/FunFox.png'
 import Port from '../images/Port.png'
 import Rot from '../images/Rot.png'
-import Nike from '../images/Nike.gif'
+import Nike from '../images/Nike.png'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -98,6 +98,54 @@ class Gallery1 extends Component {
       
       <Container >
     
+    
+    <Holder data-aos='slide-left'> 
+ 
+ <HolderInner>
+ <a href="https://rottweiler.zaheerroberts.co.za" target="_blank" rel="noopener noreferrer">
+ <ProjectHeading  >Rottweiler <br/> Care</ProjectHeading>
+<Heading  >WEBSITE </Heading>
+<Heading  >REACT.JS</Heading>
+</a>
+<Heading  >
+<a href="https://github.com/Zeus540/Rottweiler" target="_blank" rel="noopener noreferrer">
+VIEW CODE
+</a>
+</Heading>
+</HolderInner>
+<ImgHolder>
+<a href="https://rottweiler.zaheerroberts.co.za" target="_blank" rel="noopener noreferrer">
+<Img src={Rot} alt=""/>
+</a>
+</ImgHolder>
+
+
+     </Holder>
+
+     
+     <Holder data-aos='slide-right'> 
+ 
+ <HolderInner>
+ <a href="https://nike.zaheerroberts.co.za" target="_blank" rel="noopener noreferrer">
+ <ProjectHeading  >Nike Gallery</ProjectHeading>
+<Heading  >WEBSITE</Heading>
+<Heading  >REACT.JS</Heading>
+</a>
+<Heading  >
+<a href="https://github.com/Zeus540/Nike" target="_blank" rel="noopener noreferrer">
+VIEW CODE
+</a>
+</Heading>
+</HolderInner>
+<ImgHolder>
+<a href="https://nike.zaheerroberts.co.za" target="_blank" rel="noopener noreferrer">
+<Img src={Nike} alt=""/>
+</a>
+</ImgHolder>
+
+
+     </Holder>
+
   <Holder data-aos='slide-left'> 
  
       <HolderInner>
@@ -108,7 +156,9 @@ class Gallery1 extends Component {
   </a>
   </HolderInner>
   <ImgHolder>
+  <a href="https://kkwe.co.za/" target="_blank" rel="noopener noreferrer">
   <Img src={Kkwe} alt=""/>
+  </a>
   </ImgHolder>
   
   
@@ -138,11 +188,9 @@ VIEW CODE
      <Holder data-aos='slide-left'> 
  
  <HolderInner>
- <a href="https://FunFox.co.uk/" target="_blank" rel="noopener noreferrer">
  <ProjectHeading  >FunFox</ProjectHeading>
 <Heading  >WEBSITE - E-COMMERCE</Heading>
 <Heading  >WORDPRESS - WOOCOMMERCE </Heading>
-</a>
 </HolderInner>
 <ImgHolder>
 <Img src={FunFox} alt=""/>
@@ -150,74 +198,6 @@ VIEW CODE
 
 
      </Holder>
-
- 
-
-<Holder data-aos='slide-right'> 
-
-<HolderInner>
-<a href="https://zaheer.netlify.com" target="_blank" rel="noopener noreferrer">
-<ProjectHeading  >Portfolio V1</ProjectHeading>
-<Heading  >WEBSITE</Heading>
-<Heading  >REACT.JS </Heading>
-</a>
-<Heading  >
-<a href="https://github.com/Zeus540/Portfolio-V1" target="_blank" rel="noopener noreferrer">
-VIEW CODE
-</a>
-</Heading>
-</HolderInner>
-<ImgHolder>
-<Img src={Port} alt=""/>
-</ImgHolder>
-
-
-</Holder>
-
-     <Holder data-aos='slide-left'> 
- 
- <HolderInner>
- <a href="https://rottweileraddicts.netlify.app/" target="_blank" rel="noopener noreferrer">
- <ProjectHeading  >Rottweiler Addicts</ProjectHeading>
-<Heading  >WEBSITE </Heading>
-<Heading  >HTML - CSS GRID - JAVASCRIPT </Heading>
-</a>
-<Heading  >
-<a href="https://github.com/Zeus540/Rottweiler" target="_blank" rel="noopener noreferrer">
-VIEW CODE
-</a>
-</Heading>
-</HolderInner>
-<ImgHolder>
-<Img src={Rot} alt=""/>
-</ImgHolder>
-
-
-     </Holder>
-
-     
-     <Holder data-aos='slide-right'> 
- 
- <HolderInner>
- <a href="https://nikegallery.netlify.app/" target="_blank" rel="noopener noreferrer">
- <ProjectHeading  >Nike AF1 Gallery</ProjectHeading>
-<Heading  >WEBSITE</Heading>
-<Heading  >REACT.JS</Heading>
-</a>
-<Heading  >
-<a href="https://github.com/Zeus540/Nike" target="_blank" rel="noopener noreferrer">
-VIEW CODE
-</a>
-</Heading>
-</HolderInner>
-<ImgHolder>
-<Img src={Nike} alt=""/>
-
-</ImgHolder>
-
-
-     </Holder>
-         
       </Container>
     );
   }
