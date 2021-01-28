@@ -109,7 +109,7 @@ class Gallery1 extends Component {
 <Heading  >REACT.JS</Heading>
 
 <Heading  >
-<a href="https://github.com/Zeus540/Rottweiler" target="_blank" rel="noopener noreferrer">
+<a href="https://github.com/Zeus540/Rottweiler-V2" target="_blank" rel="noopener noreferrer">
 VIEW CODE
 </a>
 </Heading>
