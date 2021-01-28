@@ -257,3 +257,61 @@ a:hover{
   .Green{
     background-color: #8BC34A;
   }
+
+
+
+  /* ==================== 11. Contact ==================== */
+.contact {
+	background: #ffffff;
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+/* Contact form */
+.c-form {
+	margin-top: 0;
+	text-align: left;
+}
+
+/* Contact form feedback messages */
+.c-message {
+	text-align: left;
+}
+
+.error_message {
+	text-align: left;
+	color: tomato;
+	margin-bottom: 10px;
+}
+
+/* Loader image */
+.loader {
+	margin-left: 10px;
+}
+
+/* Contact details */
+.c-details a {
+	color: #777777;
+	display: inline-block;
+}
+
+.c-details a:hover,
+.c-details a:hover i {
+	color: #e70000;
+}
+
+.c-details i {
+	float: left;
+	width: 15px;
+	line-height: 25px;
+	font-size: 14px;
+	text-align: center;
+	color: #111111;
+}
+
+.c-details span {
+	display: block;
+	width: auto;
+	margin-bottom: 5px;
+	margin-left: 30px;
+}
