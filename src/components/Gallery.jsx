@@ -4,7 +4,7 @@ import 'react-alice-carousel/lib/alice-carousel.css'
 import Kkwe from '../images/Kkwe.png'
 import Crud from '../images/Crud.png'
 import FunFox from '../images/FunFox.png'
-import Port from '../images/Port.png'
+import Bright from '../images/Bright.png'
 import Rot from '../images/Rot.png'
 import Nike from '../images/Nike.png'
 import AOS from 'aos';
@@ -104,9 +104,10 @@ class Gallery1 extends Component {
  <HolderInner>
  <a href="https://rottweiler.zaheerroberts.co.za" target="_blank" rel="noopener noreferrer">
  <ProjectHeading  >Rottweiler <br/> Care</ProjectHeading>
-<Heading  >WEBSITE </Heading>
+ </a>
+<Heading  >INFO WEBSITE</Heading>
 <Heading  >REACT.JS</Heading>
-</a>
+
 <Heading  >
 <a href="https://github.com/Zeus540/Rottweiler" target="_blank" rel="noopener noreferrer">
 VIEW CODE
@@ -127,10 +128,11 @@ VIEW CODE
  
  <HolderInner>
  <a href="https://nike.zaheerroberts.co.za" target="_blank" rel="noopener noreferrer">
- <ProjectHeading  >Nike Gallery</ProjectHeading>
-<Heading  >WEBSITE</Heading>
+ <ProjectHeading  >Nike</ProjectHeading>
+ </a>
+<Heading  >GALLERY WEBSITE</Heading>
 <Heading  >REACT.JS</Heading>
-</a>
+
 <Heading  >
 <a href="https://github.com/Zeus540/Nike" target="_blank" rel="noopener noreferrer">
 VIEW CODE
@@ -146,14 +148,40 @@ VIEW CODE
 
      </Holder>
 
-  <Holder data-aos='slide-left'> 
+
+     <Holder data-aos='slide-left'> 
+ 
+ <HolderInner>
+ <a href="https://brightfuture.zaheerroberts.co.za/" target="_blank" rel="noopener noreferrer">
+ <ProjectHeading  >Bright Future</ProjectHeading>
+ </a>
+<Heading  >WEBSITE</Heading>
+<Heading  >PHP - HTML - CSS </Heading>
+
+<Heading  >
+<a href="https://github.com/Zeus540/BrightFuture-php" target="_blank" rel="noopener noreferrer">
+VIEW CODE
+</a>
+</Heading>
+</HolderInner>
+<ImgHolder>
+<a href="https://brightfuture.zaheerroberts.co.za/" target="_blank" rel="noopener noreferrer">
+<Img src={Bright} alt=""/>
+</a>
+</ImgHolder>
+
+
+     </Holder>
+
+  <Holder data-aos='slide-right'> 
  
       <HolderInner>
       <a href="https://kkwe.co.za/" target="_blank" rel="noopener noreferrer">
       <ProjectHeading  >Kkwe</ProjectHeading>
-  <Heading  >Website - Events Planner</Heading>
+      </a>
+  <Heading  >EVENTS PLANNER WEBSITE</Heading>
   <Heading  >REACT.JS - AOS </Heading>
-  </a>
+
   </HolderInner>
   <ImgHolder>
   <a href="https://kkwe.co.za/" target="_blank" rel="noopener noreferrer">
@@ -164,14 +192,18 @@ VIEW CODE
   
           </Holder>
          
-          <Holder data-aos='slide-right'> 
+
+
+
+          <Holder data-aos='slide-left'> 
  
  <HolderInner>
  <a href="https://zeus540.github.io/react-firebase-crud-app/" target="_blank" rel="noopener noreferrer">
  <ProjectHeading  >Crud App</ProjectHeading>
+ </a>
 <Heading  >WEBSITE</Heading>
 <Heading  >REACT.JS - SCSS </Heading>
-</a>
+
 <Heading  >
 <a href="https://github.com/Zeus540/react-firebase-crud-app" target="_blank" rel="noopener noreferrer">
 VIEW CODE
@@ -185,11 +217,11 @@ VIEW CODE
 
      </Holder>
 
-     <Holder data-aos='slide-left'> 
+     <Holder data-aos='slide-right'> 
  
  <HolderInner>
  <ProjectHeading  >FunFox</ProjectHeading>
-<Heading  >WEBSITE - E-COMMERCE</Heading>
+<Heading  >E-COMMERCE WEBSITE </Heading>
 <Heading  >WORDPRESS - WOOCOMMERCE </Heading>
 </HolderInner>
 <ImgHolder>
