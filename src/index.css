@@ -303,6 +303,7 @@ a:hover{
   .error_message {
     text-align: center;
     color: tomato;
+     font-size: 4vw;
     margin-bottom: 100px;
   }
      }
@@ -316,6 +317,7 @@ a:hover{
     .error_message {
       text-align: center;
       color: tomato;
+      font-size: 2.5vw;
       margin-bottom: 150px;
     }
        }
@@ -329,6 +331,7 @@ a:hover{
       .error_message {
         text-align: center;
         color: tomato;
+        font-size: 2vw;
         margin-bottom: 150px;
       }
          }
