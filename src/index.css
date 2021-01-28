@@ -270,16 +270,19 @@ a:hover{
 /* Contact form */
 .c-form {
 	margin-top: 0;
-	text-align: left;
+	text-align: center;
 }
 
 /* Contact form feedback messages */
 .c-message {
-	text-align: left;
+  text-align: center;
+  text-align: center;
+  font-size: 1vw;
+  line-height: 2vw;
 }
 
 .error_message {
-	text-align: left;
+	text-align: center;
 	color: tomato;
 	margin-bottom: 10px;
 }
