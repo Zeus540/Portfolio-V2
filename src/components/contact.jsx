@@ -145,29 +145,29 @@ class Contact extends Component {
                   <Fragment data-aos='fade-down'>
             <div id="message" class="c-message"></div>
             </Fragment>
-                <Form method="post" action="./contact.php" name="contactform" id="contactform" class="form c-form" data-aos='slide-right'>
+            <Form method="post" action="./contact.php" name="contactform" id="contactform" class="form c-form">
             
-					<Field>
-                        <Label htmlFor="name">Name</Label>
-                        
-						<Input name="name" type="text" id="name" placeholder="Name" />
-                        &nbsp;
-                        <Label htmlFor="email">Email</Label>
-                        
-						<Input name="email" type="text" id="email" placeholder="E-mail" />
-                        &nbsp;
-                        <Label htmlFor="comments">Message</Label>
-                        &nbsp;  
-						<Textarea name="comments" id="comments" placeholder="Message" rows="20" cols="50" ></Textarea>
-
-                        <Label htmlFor="verify">Verify</Label>
-                        
-						<Validate name="verify" type="text" id="verify" placeholder="How much is 3 + 1 =" />
-                       
-                        <br/>
-						<Submit type="submit" class="submit btn outline" id="submit" value="Send message" />
-					</Field>
-				</Form>
+            <Field>
+                          <Label htmlFor="name">Name</Label>
+                          
+              <Input name="name" type="text" id="name" placeholder="Your Name" />
+                          &nbsp;
+                          <Label htmlFor="email">Email</Label>
+                          
+              <Input name="email" type="text" id="email" placeholder="Your E-mail" />
+                          &nbsp;
+                          <Label htmlFor="comments">Message</Label>
+                          &nbsp;  
+              <Textarea name="comments" id="comments" placeholder="Message" rows="8" cols="50" ></Textarea>
+  
+                          <Label htmlFor="verify">Verify</Label>
+                          
+              <Validate name="verify" type="text" id="verify" placeholder="How much is 3 + 1 =" />
+                         
+                          <br/>
+              <Submit type="submit" class="submit btn outline" id="submit" value="Send message" />
+            </Field>
+          </Form>
             </Container>
          );
     }
