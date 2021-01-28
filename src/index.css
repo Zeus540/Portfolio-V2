@@ -278,8 +278,60 @@ a:hover{
   text-align: center;
   text-align: center;
   font-size: 1vw;
-  line-height: 2vw;
+  line-height: 3vw;
 }
+@media (min-width: 1px) and (max-width: 425px) {
+  .c-message {
+    text-align: center;
+    font-size: 4vw;
+    line-height: 5vw;
+}
+.error_message {
+	text-align: center;
+	color: tomato;
+  margin-bottom: 50px;
+  font-size: 4vw;
+}
+}
+
+   @media (min-width: 426px) and (max-width: 768px) {
+    .c-message {
+      text-align: center;
+      font-size: 4vw;
+      line-height: 5vw;
+  }
+  .error_message {
+    text-align: center;
+    color: tomato;
+    margin-bottom: 100px;
+  }
+     }
+
+     @media (min-width: 769px) and (max-width: 1024px) {
+      .c-message {
+        text-align: center;
+        font-size: 2.5vw;
+        line-height: 5vw;
+    }
+    .error_message {
+      text-align: center;
+      color: tomato;
+      margin-bottom: 150px;
+    }
+       }
+
+       @media (min-width: 1025px) and (max-width: 1440px) {
+        .c-message {
+          text-align: center;
+          font-size: 2vw;
+          line-height: 5vw;
+      }
+      .error_message {
+        text-align: center;
+        color: tomato;
+        margin-bottom: 150px;
+      }
+         }
 
 .error_message {
 	text-align: center;
