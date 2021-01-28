@@ -274,6 +274,13 @@ a:hover{
 }
 
 /* Contact form feedback messages */
+.error_message {
+	text-align: center;
+	color: tomato;
+	margin-bottom: 10px;
+}
+
+
 .c-message {
   text-align: center;
   text-align: center;
@@ -336,11 +343,6 @@ a:hover{
       }
          }
 
-.error_message {
-	text-align: center;
-	color: tomato;
-	margin-bottom: 10px;
-}
 
 /* Loader image */
 .loader {
