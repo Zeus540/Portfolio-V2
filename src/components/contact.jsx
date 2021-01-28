@@ -142,10 +142,8 @@ class Contact extends Component {
                   <MainHeadingContainer>
           <MainHeading data-aos='slide-up'>CONTACT ME</MainHeading>
           </MainHeadingContainer>
-                  <Fragment data-aos='fade-down'>
-            <div id="message" class="c-message"></div>
-            </Fragment>
-            <Form method="post" action="./contact.php" name="contactform" id="contactform" class="form c-form">
+               <div id="message" class="c-message"></div>
+            <Form method="post" action="contact.php" name="contactform" id="contactform" class="form c-form">
             
             <Field>
                           <Label htmlFor="name">Name</Label>
