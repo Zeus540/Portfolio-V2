@@ -198,11 +198,11 @@ VIEW CODE
           <Holder data-aos='slide-left'> 
  
  <HolderInner>
- <a href="https://zeus540.github.io/react-firebase-crud-app/" target="_blank" rel="noopener noreferrer">
- <ProjectHeading  >Crud App</ProjectHeading>
+ <a href="https://todo.zaheerroberts.co.za/" target="_blank" rel="noopener noreferrer">
+ <ProjectHeading  >Task Manager</ProjectHeading>
  </a>
-<Heading  >WEBSITE</Heading>
-<Heading  >REACT.JS - SCSS </Heading>
+<Heading  >TASK LOGGER WEBSITE</Heading>
+<Heading  >REACT.JS - SCSS - FIREBASE </Heading>
 
 <Heading  >
 <a href="https://github.com/Zeus540/react-firebase-crud-app" target="_blank" rel="noopener noreferrer">
