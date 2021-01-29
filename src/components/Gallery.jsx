@@ -102,6 +102,30 @@ class Gallery1 extends Component {
     <Holder data-aos='slide-left'> 
  
  <HolderInner>
+ <a href="https://todo.zaheerroberts.co.za/" target="_blank" rel="noopener noreferrer">
+ <ProjectHeading  >Task Manager</ProjectHeading>
+ </a>
+<Heading  >TASK LOGGER WEBSITE</Heading>
+<Heading  >REACT.JS - SCSS - FIREBASE </Heading>
+
+<Heading  >
+<a href="https://github.com/Zeus540/react-firebase-crud-app" target="_blank" rel="noopener noreferrer">
+VIEW CODE
+</a>
+</Heading>
+</HolderInner>
+<ImgHolder>
+<a href="https://todo.zaheerroberts.co.za/" target="_blank" rel="noopener noreferrer">
+<Img src={Crud} alt=""/>
+</a>
+</ImgHolder>
+
+
+     </Holder>
+    
+    <Holder data-aos='slide-right'> 
+ 
+ <HolderInner>
  <a href="https://rottweiler.zaheerroberts.co.za" target="_blank" rel="noopener noreferrer">
  <ProjectHeading  >Rottweiler <br/> Care</ProjectHeading>
  </a>
@@ -124,7 +148,8 @@ VIEW CODE
      </Holder>
 
      
-     <Holder data-aos='slide-right'> 
+     
+     <Holder data-aos='slide-left'> 
  
  <HolderInner>
  <a href="https://nike.zaheerroberts.co.za" target="_blank" rel="noopener noreferrer">
@@ -149,7 +174,7 @@ VIEW CODE
      </Holder>
 
 
-     <Holder data-aos='slide-left'> 
+     <Holder data-aos='slide-right'> 
  
  <HolderInner>
  <a href="https://brightfuture.zaheerroberts.co.za/" target="_blank" rel="noopener noreferrer">
@@ -173,7 +198,7 @@ VIEW CODE
 
      </Holder>
 
-  <Holder data-aos='slide-right'> 
+  <Holder data-aos='slide-left'> 
  
       <HolderInner>
       <a href="https://kkwe.co.za/" target="_blank" rel="noopener noreferrer">
@@ -195,27 +220,6 @@ VIEW CODE
 
 
 
-          <Holder data-aos='slide-left'> 
- 
- <HolderInner>
- <a href="https://todo.zaheerroberts.co.za/" target="_blank" rel="noopener noreferrer">
- <ProjectHeading  >Task Manager</ProjectHeading>
- </a>
-<Heading  >TASK LOGGER WEBSITE</Heading>
-<Heading  >REACT.JS - SCSS - FIREBASE </Heading>
-
-<Heading  >
-<a href="https://github.com/Zeus540/react-firebase-crud-app" target="_blank" rel="noopener noreferrer">
-VIEW CODE
-</a>
-</Heading>
-</HolderInner>
-<ImgHolder>
-<Img src={Crud} alt=""/>
-</ImgHolder>
-
-
-     </Holder>
 
      <Holder data-aos='slide-right'> 
  
