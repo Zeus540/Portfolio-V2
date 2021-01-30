@@ -2,7 +2,8 @@
   import styled from 'styled-components';
   import AOS from 'aos';
   import 'aos/dist/aos.css';
-
+  import Liqourice from '../images/liquorice.png';
+  import Kkwe from '../images/kkwe.png';
 
   const Container = styled.div`
   overflow: hidden;
@@ -21,7 +22,7 @@
   letter-spacing: 1px;
   line-height:1.5vw;
   font-family:arial;
-  margin:1vw 0% 0% 0%;
+  margin:1vw 0% 1vw 0%;
   @media (min-width: 1px) and (max-width: 426px) {
     font-size: 4vw;
     line-height: 5vw;
@@ -93,7 +94,7 @@ const MainHeadingContainer = styled.div`
     <div className="container left"  data-aos='slide-up'>
       <div className="content">
         <Heading>2021</Heading>
-        <Para>BECAME A FREELANCER</Para>
+        <Para>STARTED FREELANCER</Para>
       </div>
     </div>
 
@@ -101,12 +102,14 @@ const MainHeadingContainer = styled.div`
       <div className="content">
         <Heading>2020</Heading>
         <Para>BUILT A WEBSITE FOR A SMALL BUSINESS</Para>
+        <img src={Kkwe} alt="" width="150px"/>
       </div>
     </div>
     <div className="container leftContainer leftImp" data-aos='slide-up'>
       <div className="content Green">
         <Heading>2019</Heading>
         <Para>STARTED WORKING AT DIGITAS LIQUORICE</Para>
+        <img src={Liqourice} alt="" width="100px"/>
       </div>
     </div>
     <div className="container leftContainer leftImp" data-aos='slide-up'>
