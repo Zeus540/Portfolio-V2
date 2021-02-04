@@ -81,7 +81,7 @@ render() {
           <Holder >
 
          
-      <a href="mailto:hello@odinsgate.com"> <Heading2 data-aos='slide-left'> Work with me</Heading2></a>
+      <a href="mailto:hello@odinsgate.co.za"> <Heading2 data-aos='slide-left'> Work with me</Heading2></a>
        
     
           
