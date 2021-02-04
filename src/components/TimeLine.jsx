@@ -91,18 +91,18 @@ const MainHeadingContainer = styled.div`
           </MainHeadingContainer>
         <div className="timeline" >
   
-    <div className="container left"  data-aos='slide-up'>
-      <div className="content">
-        <Heading>2021</Heading>
-        <Para>STARTED FREELANCER</Para>
-      </div>
-    </div>
+   
 
     <div className="container right"  data-aos='slide-up'>
       <div className="content">
         <Heading>2020</Heading>
         <Para>BUILT A WEBSITE FOR A SMALL BUSINESS</Para>
         <img src={Kkwe} alt="" width="150px"/>
+      </div>
+    </div>
+    <div className="container right"  data-aos='slide-up'>
+      <div className="content">
+        <Para>STARTED FREELANCING</Para>
       </div>
     </div>
     <div className="container leftContainer leftImp" data-aos='slide-up'>
@@ -136,6 +136,8 @@ const MainHeadingContainer = styled.div`
   </div>
 
         </Container>
+
+        
     );
     }
   }
