@@ -80,16 +80,10 @@ render() {
 
           <Holder >
 
-          <Link 
-        activeClass="active"
-        to="Contact"
-        spy={true}
-        smooth={true}
-        offset={20}
-        duration= {2000}
-        ><Heading2 data-aos='slide-left'>Work with me</Heading2>
-        
-      </Link>
+         
+      <a href="mailto:hello@odinsgate.com"> <Heading2 data-aos='slide-left'> Work with me</Heading2></a>
+       
+    
           
         
           </Holder>

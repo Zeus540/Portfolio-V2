@@ -105,7 +105,7 @@
 
             <LeftContainer data-aos='slide-right'>
              <MainHeadingHolder>
-             <MainHeading >SAY HI</MainHeading>
+             <a href="mailto:hello@odinsgate.com"><MainHeading >SAY HI</MainHeading></a>
              </MainHeadingHolder>
              <Copyright >ALL RIGHT RESERVED COPYRIGHT &copy; 2020</Copyright>
             </LeftContainer>

@@ -18,7 +18,6 @@ function App() {
         <Gallery1/>
         <Social/>
         <TimeLine/>
-        <Contact/>
         <Footer/>
     </div>
   );
