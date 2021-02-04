@@ -81,7 +81,7 @@ render() {
           <Holder >
 
          
-      <a href="mailto:hello@odinsgate.co.za"> <Heading2 data-aos='slide-left'> Work with me</Heading2></a>
+      <a href="mailto:hello@odinsgate.co.za?subject=Contact%20From%20zaheerroberts.co.za%20&cc=zaheerroberts4@gmail.com"> <Heading2 data-aos='slide-left'> Work with me</Heading2></a>
        
     
           

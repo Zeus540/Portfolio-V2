@@ -105,7 +105,7 @@
 
             <LeftContainer data-aos='slide-right'>
              <MainHeadingHolder>
-             <a href="mailto:hello@odinsgate.co.za"><MainHeading >SAY HI</MainHeading></a>
+             <a href="mailto:hello@odinsgate.co.za?subject=Contact%20From%20zaheerroberts.co.za%20&cc=zaheerroberts4@gmail.com"><MainHeading >SAY HI</MainHeading></a>
              </MainHeadingHolder>
              <Copyright >ALL RIGHT RESERVED COPYRIGHT &copy; 2020</Copyright>
             </LeftContainer>
