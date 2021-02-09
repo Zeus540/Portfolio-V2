@@ -4,7 +4,7 @@ import 'react-alice-carousel/lib/alice-carousel.css'
 import Kkwe from '../images/Kkwe.png'
 import Galaxy from '../images/Galaxy.png'
 import Crud from '../images/Crud.png'
-import FunFox from '../images/FunFox.png'
+
 import Bright from '../images/Bright.png'
 import Rot from '../images/Rot.png'
 import Nike from '../images/Nike.png'
@@ -244,22 +244,6 @@ VIEW CODE
           </Holder>
          
 
-
-
-
-     <Holder data-aos='slide-right'> 
- 
- <HolderInner>
- <ProjectHeading  >FunFox</ProjectHeading>
-<Heading  >E-COMMERCE WEBSITE </Heading>
-<Heading  >WORDPRESS - WOOCOMMERCE </Heading>
-</HolderInner>
-<ImgHolder>
-<Img src={FunFox} alt=""/>
-</ImgHolder>
-
-
-     </Holder>
       </Container>
     );
   }
