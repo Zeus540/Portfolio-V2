@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import 'react-alice-carousel/lib/alice-carousel.css'
 import Kkwe from '../images/Kkwe.png'
+import Galaxy from '../images/Galaxy.png'
 import Crud from '../images/Crud.png'
 import FunFox from '../images/FunFox.png'
 import Bright from '../images/Bright.png'
@@ -98,6 +99,30 @@ class Gallery1 extends Component {
       
       <Container >
     
+    <Holder data-aos='slide-right'> 
+ 
+ <HolderInner>
+ <a href="https://galaxy.zaheerroberts.co.za/" target="_blank" rel="noopener noreferrer">
+ <ProjectHeading  >Space</ProjectHeading>
+ </a>
+<Heading  >INTERACTIVE INFO WEBSITE</Heading>
+<Heading  >JAVASCIPT - GSAP - SCSS - HTML </Heading>
+
+<Heading  >
+<a href="https://github.com/Zeus540/Gallaxy" target="_blank" rel="noopener noreferrer">
+VIEW CODE
+</a>
+</Heading>
+</HolderInner>
+
+<ImgHolder>
+<a href="https://galaxy.zaheerroberts.co.za/" target="_blank" rel="noopener noreferrer">
+<Img src={Galaxy} alt=""/>
+</a>
+</ImgHolder>
+
+
+     </Holder>
     
     <Holder data-aos='slide-left'> 
  
@@ -114,6 +139,7 @@ VIEW CODE
 </a>
 </Heading>
 </HolderInner>
+
 <ImgHolder>
 <a href="https://todo.zaheerroberts.co.za/" target="_blank" rel="noopener noreferrer">
 <Img src={Crud} alt=""/>

@@ -3,7 +3,7 @@
   import AOS from 'aos';
   import 'aos/dist/aos.css';
   import Liqourice from '../images/liquorice.png';
-  import Kkwe from '../images/kkwe.png';
+  import Kkwe from '../images/kkwel.png';
 
   const Container = styled.div`
   overflow: hidden;
