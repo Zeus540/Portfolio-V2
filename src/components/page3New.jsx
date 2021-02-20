@@ -694,8 +694,8 @@ gsap.to('.Nginx',{
 })
 
 gsap.to('.Illustrator',{
-  top:'-200',
-  left:'-150',
+ xPercent:'-200',
+  yPercent:'-150',
   scrollTrigger: {
     trigger:'#Home',
    start: '90 top',
