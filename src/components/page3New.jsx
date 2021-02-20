@@ -719,11 +719,7 @@ gsap.to('.Illustrator',{
          <HeadingAnimated >
         
              <Heading3 > I am a</Heading3>
-        <Heading2  >  <Typical2
-              steps={['WEB DEVELOPER', 2500,'UI / UX DESIGNER',2500,'ANIMAL LOVER',2500,'3D MODELER / ARTIST',2500,]}
-              loop={Infinity}
-              wrapper={"h2"}
-            /><br/></Heading2>
+        <Heading2  > CREATIVE<br/> WEB DEVELOPER</Heading2>
         
         </HeadingAnimated>
 
