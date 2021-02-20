@@ -479,8 +479,8 @@ function Page3New() {
   useEffect(() =>{
 
     gsap.to('.Head',{
-      x:'0',
-      y:'-150',
+      xPercent:'0',
+      yPercent:'-150',
     
       scrollTrigger: {
         trigger:'#Home',
@@ -498,39 +498,39 @@ function Page3New() {
 useEffect(() =>{
 
 gsap.to('.Html',{
-  top:'-200',
-  left:'150',
+  xPercent:'-200',
+  yPercent:'150',
   scrollTrigger: {
     trigger:'#Home',
     start: '90 top',
-    scrub: 1,
-    end: '90 top',
+    scrub: 0,
+    end: 'bottom 60%',
      
   }
 
 })
 
 gsap.to('.Git',{
-  top:'-200',
+  xPercent:'-200',
   left:'300',
   scrollTrigger: {
     trigger:'#Home',
    start: '90 top',
-    scrub: 1,
-    end: '90 top',
+    scrub: 0,
+    end: 'bottom 60%',
      
   }
 
 })
 
 gsap.to('.Sass',{
-  top:'-300',
-  left:'-50',
+  xPercent:'-300',
+  yPercent:'-50',
   scrollTrigger: {
     trigger:'#Home',
    start: '90 top',
-    scrub: 1,
-    end: '90 top',
+    scrub: 0,
+    end: 'bottom 60%',
      
   }
 
@@ -538,169 +538,169 @@ gsap.to('.Sass',{
 
 
 gsap.to('.Javascript',{
-  top:'-350',
-  left:'100',
+  xPercent:'-350',
+  yPercent:'100',
   scrollTrigger: {
     trigger:'#Home',
    start: '90 top',
-    scrub: 1,
-    end: '90 top',
+    scrub: 0,
+    end: 'bottom 60%',
      
   }
 
 })
 
 gsap.to('.Npm',{
-  top:'-400',
-  left:'-150',
+  xPercent:'-400',
+  yPercent:'-150',
   scrollTrigger: {
     trigger:'#Home',
    start: '90 top',
-    scrub: 1,
-    end: '90 top',
+    scrub: 0,
+    end: 'bottom 60%',
      
   }
 
 })
 
 gsap.to('.Css',{
-  top:'250',
-  left:'-20',
+  xPercent:'250',
+  yPercent:'-20',
   scrollTrigger: {
     trigger:'#Home',
    start: '90 top',
-    scrub: 1,
-    end: '90 top',
+    scrub: 0,
+    end: 'bottom 60%',
      
   }
 
 })
 
 gsap.to('.Linux',{
-  top:'350',
-  left:'-300',
+  xPercent:'350',
+  yPercent:'-300',
   scrollTrigger: {
     trigger:'#Home',
    start: '90 top',
-    scrub: 1,
-    end: '90 top',
+    scrub: 0,
+    end: 'bottom 60%',
      
   }
 
 })
 
 gsap.to('.Mailchimp',{
-  top:'-350',
-  left:'-300',
+  xPercent:'-350',
+  yPercent:'-300',
   scrollTrigger: {
     trigger:'#Home',
    start: '90 top',
-    scrub: 1,
-    end: '90 top',
+    scrub: 0,
+    end: 'bottom 60%',
      
   }
 
 })
 
 gsap.to('.Photoshop',{
-  top:'250',
-  left:'-100',
+  xPercent:'250',
+  yPercent:'-100',
   scrollTrigger: {
     trigger:'#Home',
    start: '90 top',
-    scrub: 1,
-    end: '90 top',
+    scrub: 0,
+    end: 'bottom 60%',
      
   }
 
 })
 
 gsap.to('.ReactImgs',{
-  top:'-200',
-  left:'50',
+  xPercent:'-200',
+  yPercent:'50',
   scrollTrigger: {
     trigger:'#Home',
    start: '90 top',
-    scrub: 1,
-    end: '90 top',
+    scrub: 0,
+    end: 'bottom 60%',
      
   }
 
 })
 
 gsap.to('.Jira',{
-  top:'-150',
-  left:'-50',
+  xPercent:'-150',
+  yPercent:'-50',
   scrollTrigger: {
     trigger:'#Home',
    start: '90 top',
-    scrub: 1,
-    end: '90 top',
+    scrub: 0,
+    end: 'bottom 60%',
      
   }
 
 })
 
 gsap.to('.Sketch',{
-  top:'250',
-  left:'-150',
+  xPercent:'250',
+  yPercent:'-150',
   scrollTrigger: {
     trigger:'#Home',
    start: '90 top',
-    scrub: 1,
-    end: '90 top',
+    scrub: 0,
+    end: 'bottom 60%',
      
   }
 
 })
 
 gsap.to('.Bootstrap',{
-  top:'250',
-  left:'150',
+  xPercent:'250',
+  yPercent:'150',
   scrollTrigger: {
     trigger:'#Home',
    start: '90 top',
-    scrub: 1,
-    end: '90 top',
+    scrub: 0,
+    end: 'bottom 60%',
      
   }
 
 })
 
 gsap.to('.Wordpress',{
-  top:'250',
-  left:'-250',
+  xPercent:'250',
+  yPercent:'-250',
   scrollTrigger: {
     trigger:'#Home',
    start: '90 top',
-    scrub: 1,
-    end: '90 top',
+    scrub: 0,
+    end: 'bottom 60%',
      
   }
 
 })
 
 gsap.to('.Nginx',{
-  top:'-200',
-  left:'-300',
+  xPercent:'-200',
+  yPercent:'-300',
   scrollTrigger: {
     trigger:'#Home',
    start: '90 top',
-    scrub: 1,
-    end: '90 top',
+    scrub: 0,
+    end: 'bottom 60%',
      
   }
 
 })
 
 gsap.to('.Illustrator',{
- xPercent:'-200',
+  xPercent:'-200',
   yPercent:'-150',
   scrollTrigger: {
     trigger:'#Home',
    start: '90 top',
- 
-    end: '90 top',
+    scrub: 0,
+    end: 'bottom 60%',
      
   }
 
@@ -747,7 +747,24 @@ I am very skilled in my craft</Para>
      
      
       <RightContainer >
- 
+   <Skills>
+   <HtmlImg src={Html}  alt="" className="Html" />
+      <GitImg src={Git}  alt="" className="Git" />
+      <BootstrapImg src={Bootstrap}  alt="" className="Bootstrap" />
+      <CssImg src={Css}  alt="" className="Css" />
+      <SassImg src={Sass}  alt="" className="Sass" />
+      <LinuxImg src={Linux}  alt="" className="Linux" />
+      <WordpressImg src={Wordpress}  alt="" className="Wordpress" />
+      <NginxImg src={Nginx}  alt="" className="Nginx" />
+      <NpmImg src={Npm}  alt="" className="Npm" />
+      <ReactImg src={ReactImgs}  alt="" className="ReactImgs" />
+      <JavascriptImg src={Javascript}  alt="" className="Javascript" />
+      <MailchimpImg src={Mailchimp}  alt="" className="Mailchimp" />
+      <PhotoshopImg src={Photoshop}  alt="" className="Photoshop" />
+      <IllustratorImg src={Illustrator}  alt="" className="Illustrator" />
+      <JiraImg src={Jira}  alt="" className="Jira" />
+      <SketchImg src={Sketch}  alt="" className="Sketch" />
+    </Skills>
     
 
       <HeadImg src={Head} className="Head" alt="" />
