@@ -488,8 +488,8 @@ gsap.to('.Head',{
     start: '90 top',
     scrub: 0.5,
     markers:true,
-    end: 200,
-    toggleActions: 'restart complete reverse reset'
+    end: '90 top',
+    toggleActions: 'reverse '
   }
 
 })
