@@ -747,24 +747,7 @@ I am very skilled in my craft</Para>
      
      
       <RightContainer >
-   <Skills>
-   <HtmlImg src={Html}  alt="" className="Html" />
-      <GitImg src={Git}  alt="" className="Git" />
-      <BootstrapImg src={Bootstrap}  alt="" className="Bootstrap" />
-      <CssImg src={Css}  alt="" className="Css" />
-      <SassImg src={Sass}  alt="" className="Sass" />
-      <LinuxImg src={Linux}  alt="" className="Linux" />
-      <WordpressImg src={Wordpress}  alt="" className="Wordpress" />
-      <NginxImg src={Nginx}  alt="" className="Nginx" />
-      <NpmImg src={Npm}  alt="" className="Npm" />
-      <ReactImg src={ReactImgs}  alt="" className="ReactImgs" />
-      <JavascriptImg src={Javascript}  alt="" className="Javascript" />
-      <MailchimpImg src={Mailchimp}  alt="" className="Mailchimp" />
-      <PhotoshopImg src={Photoshop}  alt="" className="Photoshop" />
-      <IllustratorImg src={Illustrator}  alt="" className="Illustrator" />
-      <JiraImg src={Jira}  alt="" className="Jira" />
-      <SketchImg src={Sketch}  alt="" className="Sketch" />
-    </Skills>
+ 
     
 
       <HeadImg src={Head} className="Head" alt="" />
