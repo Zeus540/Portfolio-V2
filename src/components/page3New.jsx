@@ -476,23 +476,26 @@ position: absolute;
 `
 function Page3New() {
 
+  useEffect(() =>{
+
+    gsap.to('.Head',{
+      x:'0',
+      y:'-150',
+    
+      scrollTrigger: {
+        trigger:'#Home',
+        start: '90 top',
+        scrub: 0.5,
+        markers:true,
+        end: '90 top',
+     
+      }
+    
+    })
+  
+    },[]);
 
 useEffect(() =>{
-
-gsap.to('.Head',{
-  x:'0',
-  y:'-150',
-
-  scrollTrigger: {
-    trigger:'#Home',
-    start: '90 top',
-    scrub: 0.5,
-    markers:true,
-    end: '90 top',
-    toggleActions: 'reverse '
-  }
-
-})
 
 gsap.to('.Html',{
   top:'-200',
@@ -501,8 +504,8 @@ gsap.to('.Html',{
     trigger:'#Home',
     start: '90 top',
     scrub: 1,
-    end: 'bottom 60%',
-    toggleActions: 'restart complete reverse reset'
+    end: '90 top',
+     
   }
 
 })
@@ -514,8 +517,8 @@ gsap.to('.Git',{
     trigger:'#Home',
    start: '90 top',
     scrub: 1,
-    end: 'bottom 60%',
-    toggleActions: 'restart complete reverse reset'
+    end: '90 top',
+     
   }
 
 })
@@ -527,8 +530,8 @@ gsap.to('.Sass',{
     trigger:'#Home',
    start: '90 top',
     scrub: 1,
-    end: 'bottom 60%',
-    toggleActions: 'restart complete reverse reset'
+    end: '90 top',
+     
   }
 
 })
@@ -541,8 +544,8 @@ gsap.to('.Javascript',{
     trigger:'#Home',
    start: '90 top',
     scrub: 1,
-    end: 'bottom 60%',
-    toggleActions: 'restart complete reverse reset'
+    end: '90 top',
+     
   }
 
 })
@@ -554,8 +557,8 @@ gsap.to('.Npm',{
     trigger:'#Home',
    start: '90 top',
     scrub: 1,
-    end: 'bottom 60%',
-    toggleActions: 'restart complete reverse reset'
+    end: '90 top',
+     
   }
 
 })
@@ -567,8 +570,8 @@ gsap.to('.Css',{
     trigger:'#Home',
    start: '90 top',
     scrub: 1,
-    end: 'bottom 60%',
-    toggleActions: 'restart complete reverse reset'
+    end: '90 top',
+     
   }
 
 })
@@ -580,8 +583,8 @@ gsap.to('.Linux',{
     trigger:'#Home',
    start: '90 top',
     scrub: 1,
-    end: 'bottom 60%',
-    toggleActions: 'restart complete reverse reset'
+    end: '90 top',
+     
   }
 
 })
@@ -593,8 +596,8 @@ gsap.to('.Mailchimp',{
     trigger:'#Home',
    start: '90 top',
     scrub: 1,
-    end: 'bottom 60%',
-    toggleActions: 'restart complete reverse reset'
+    end: '90 top',
+     
   }
 
 })
@@ -606,8 +609,8 @@ gsap.to('.Photoshop',{
     trigger:'#Home',
    start: '90 top',
     scrub: 1,
-    end: 'bottom 60%',
-    toggleActions: 'restart complete reverse reset'
+    end: '90 top',
+     
   }
 
 })
@@ -619,8 +622,8 @@ gsap.to('.ReactImgs',{
     trigger:'#Home',
    start: '90 top',
     scrub: 1,
-    end: 'bottom 60%',
-    toggleActions: 'restart complete reverse reset'
+    end: '90 top',
+     
   }
 
 })
@@ -632,8 +635,8 @@ gsap.to('.Jira',{
     trigger:'#Home',
    start: '90 top',
     scrub: 1,
-    end: 'bottom 60%',
-    toggleActions: 'restart complete reverse reset'
+    end: '90 top',
+     
   }
 
 })
@@ -645,8 +648,8 @@ gsap.to('.Sketch',{
     trigger:'#Home',
    start: '90 top',
     scrub: 1,
-    end: 'bottom 60%',
-    toggleActions: 'restart complete reverse reset'
+    end: '90 top',
+     
   }
 
 })
@@ -658,8 +661,8 @@ gsap.to('.Bootstrap',{
     trigger:'#Home',
    start: '90 top',
     scrub: 1,
-    end: 'bottom 60%',
-    toggleActions: 'restart complete reverse reset'
+    end: '90 top',
+     
   }
 
 })
@@ -671,8 +674,8 @@ gsap.to('.Wordpress',{
     trigger:'#Home',
    start: '90 top',
     scrub: 1,
-    end: 'bottom 60%',
-    toggleActions: 'restart complete reverse reset'
+    end: '90 top',
+     
   }
 
 })
@@ -684,8 +687,8 @@ gsap.to('.Nginx',{
     trigger:'#Home',
    start: '90 top',
     scrub: 1,
-    end: 'bottom 60%',
-    toggleActions: 'restart complete reverse reset'
+    end: '90 top',
+     
   }
 
 })
@@ -697,8 +700,8 @@ gsap.to('.Illustrator',{
     trigger:'#Home',
    start: '90 top',
     scrub: 1,
-    end: 'bottom 60%',
-    toggleActions: 'restart complete reverse reset'
+    end: '90 top',
+     
   }
 
 })
