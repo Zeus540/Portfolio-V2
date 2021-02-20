@@ -485,9 +485,10 @@ gsap.to('.Head',{
 
   scrollTrigger: {
     trigger:'#Home',
-    start: 'top',
-    scrub: 2,
-    end: 'bottom 60%',
+    start: '90 top',
+    scrub: 0.5,
+    markers:true,
+    end: 200,
     toggleActions: 'restart complete reverse reset'
   }
 
@@ -498,8 +499,8 @@ gsap.to('.Html',{
   left:'150',
   scrollTrigger: {
     trigger:'#Home',
-    start: 'top',
-    scrub: 2,
+    start: '90 top',
+    scrub: 1,
     end: 'bottom 60%',
     toggleActions: 'restart complete reverse reset'
   }
@@ -511,8 +512,8 @@ gsap.to('.Git',{
   left:'300',
   scrollTrigger: {
     trigger:'#Home',
-    start: 'top',
-    scrub: 2,
+   start: '90 top',
+    scrub: 1,
     end: 'bottom 60%',
     toggleActions: 'restart complete reverse reset'
   }
@@ -524,8 +525,8 @@ gsap.to('.Sass',{
   left:'-50',
   scrollTrigger: {
     trigger:'#Home',
-    start: 'top',
-    scrub: 2,
+   start: '90 top',
+    scrub: 1,
     end: 'bottom 60%',
     toggleActions: 'restart complete reverse reset'
   }
@@ -538,8 +539,8 @@ gsap.to('.Javascript',{
   left:'100',
   scrollTrigger: {
     trigger:'#Home',
-    start: 'top',
-    scrub: 2,
+   start: '90 top',
+    scrub: 1,
     end: 'bottom 60%',
     toggleActions: 'restart complete reverse reset'
   }
@@ -551,8 +552,8 @@ gsap.to('.Npm',{
   left:'-150',
   scrollTrigger: {
     trigger:'#Home',
-    start: 'top',
-    scrub: 2,
+   start: '90 top',
+    scrub: 1,
     end: 'bottom 60%',
     toggleActions: 'restart complete reverse reset'
   }
@@ -564,8 +565,8 @@ gsap.to('.Css',{
   left:'-20',
   scrollTrigger: {
     trigger:'#Home',
-    start: 'top',
-    scrub: 2,
+   start: '90 top',
+    scrub: 1,
     end: 'bottom 60%',
     toggleActions: 'restart complete reverse reset'
   }
@@ -577,8 +578,8 @@ gsap.to('.Linux',{
   left:'-300',
   scrollTrigger: {
     trigger:'#Home',
-    start: 'top',
-    scrub: 2,
+   start: '90 top',
+    scrub: 1,
     end: 'bottom 60%',
     toggleActions: 'restart complete reverse reset'
   }
@@ -590,8 +591,8 @@ gsap.to('.Mailchimp',{
   left:'-300',
   scrollTrigger: {
     trigger:'#Home',
-    start: 'top',
-    scrub: 2,
+   start: '90 top',
+    scrub: 1,
     end: 'bottom 60%',
     toggleActions: 'restart complete reverse reset'
   }
@@ -603,8 +604,8 @@ gsap.to('.Photoshop',{
   left:'-100',
   scrollTrigger: {
     trigger:'#Home',
-    start: 'top',
-    scrub: 2,
+   start: '90 top',
+    scrub: 1,
     end: 'bottom 60%',
     toggleActions: 'restart complete reverse reset'
   }
@@ -616,8 +617,8 @@ gsap.to('.ReactImgs',{
   left:'50',
   scrollTrigger: {
     trigger:'#Home',
-    start: 'top',
-    scrub: 2,
+   start: '90 top',
+    scrub: 1,
     end: 'bottom 60%',
     toggleActions: 'restart complete reverse reset'
   }
@@ -629,8 +630,8 @@ gsap.to('.Jira',{
   left:'-50',
   scrollTrigger: {
     trigger:'#Home',
-    start: 'top',
-    scrub: 2,
+   start: '90 top',
+    scrub: 1,
     end: 'bottom 60%',
     toggleActions: 'restart complete reverse reset'
   }
@@ -642,8 +643,8 @@ gsap.to('.Sketch',{
   left:'-150',
   scrollTrigger: {
     trigger:'#Home',
-    start: 'top',
-    scrub: 2,
+   start: '90 top',
+    scrub: 1,
     end: 'bottom 60%',
     toggleActions: 'restart complete reverse reset'
   }
@@ -655,8 +656,8 @@ gsap.to('.Bootstrap',{
   left:'150',
   scrollTrigger: {
     trigger:'#Home',
-    start: 'top',
-    scrub: 2,
+   start: '90 top',
+    scrub: 1,
     end: 'bottom 60%',
     toggleActions: 'restart complete reverse reset'
   }
@@ -668,8 +669,8 @@ gsap.to('.Wordpress',{
   left:'-250',
   scrollTrigger: {
     trigger:'#Home',
-    start: 'top',
-    scrub: 2,
+   start: '90 top',
+    scrub: 1,
     end: 'bottom 60%',
     toggleActions: 'restart complete reverse reset'
   }
@@ -681,8 +682,8 @@ gsap.to('.Nginx',{
   left:'-300',
   scrollTrigger: {
     trigger:'#Home',
-    start: 'top',
-    scrub: 2,
+   start: '90 top',
+    scrub: 1,
     end: 'bottom 60%',
     toggleActions: 'restart complete reverse reset'
   }
@@ -694,8 +695,8 @@ gsap.to('.Illustrator',{
   left:'-150',
   scrollTrigger: {
     trigger:'#Home',
-    start: 'top',
-    scrub: 2,
+   start: '90 top',
+    scrub: 1,
     end: 'bottom 60%',
     toggleActions: 'restart complete reverse reset'
   }
