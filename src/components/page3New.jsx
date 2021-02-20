@@ -41,7 +41,7 @@ width: 40vw;
 overflow:hidden;
 margin:0px;
 position: relative;
-margin: 5vw 0% 5vw 5vw;
+margin: 0vw 0% 5vw 5vw;
 
 @media (min-width: 1px) and (max-width: 426px) {
   width: 84%;
@@ -122,7 +122,7 @@ color:white;
 font-family:arial;
 margin:2vw 0%;
 font-weight:bolder;
-max-height:200px;
+
 @media (min-width: 1px) and (max-width: 426px) {
   font-size:11vw; 
    }
@@ -184,7 +184,7 @@ const RightContainer = styled.div`
 display:flex;
 
 position: relative;
-top: 5vw;
+top: -5vw;
 right: 0;
 margin-right:5vw;
 @media (min-width: 1px) and (max-width: 426px) {
@@ -484,9 +484,9 @@ function Page3New() {
     
       scrollTrigger: {
         trigger:'#Home',
-        start: '90 top',
-        scrub: 0.5,
-        markers:true,
+        start: '310 top',
+        scrub: 0,
+       
         end: '90 top',
      
       }
@@ -502,7 +502,7 @@ gsap.to('.Html',{
   yPercent:'150',
   scrollTrigger: {
     trigger:'#Home',
-    start: '90 top',
+      start: '310 top',
     scrub: 0,
     end: 'bottom 60%',
      
@@ -515,7 +515,7 @@ gsap.to('.Git',{
   left:'300',
   scrollTrigger: {
     trigger:'#Home',
-   start: '90 top',
+     start: '310 top',
     scrub: 0,
     end: 'bottom 60%',
      
@@ -528,7 +528,7 @@ gsap.to('.Sass',{
   yPercent:'-50',
   scrollTrigger: {
     trigger:'#Home',
-   start: '90 top',
+     start: '310 top',
     scrub: 0,
     end: 'bottom 60%',
      
@@ -542,7 +542,7 @@ gsap.to('.Javascript',{
   yPercent:'100',
   scrollTrigger: {
     trigger:'#Home',
-   start: '90 top',
+     start: '310 top',
     scrub: 0,
     end: 'bottom 60%',
      
@@ -555,7 +555,7 @@ gsap.to('.Npm',{
   yPercent:'-150',
   scrollTrigger: {
     trigger:'#Home',
-   start: '90 top',
+     start: '310 top',
     scrub: 0,
     end: 'bottom 60%',
      
@@ -568,7 +568,7 @@ gsap.to('.Css',{
   yPercent:'-20',
   scrollTrigger: {
     trigger:'#Home',
-   start: '90 top',
+     start: '310 top',
     scrub: 0,
     end: 'bottom 60%',
      
@@ -581,7 +581,7 @@ gsap.to('.Linux',{
   yPercent:'-300',
   scrollTrigger: {
     trigger:'#Home',
-   start: '90 top',
+     start: '310 top',
     scrub: 0,
     end: 'bottom 60%',
      
@@ -594,7 +594,7 @@ gsap.to('.Mailchimp',{
   yPercent:'-300',
   scrollTrigger: {
     trigger:'#Home',
-   start: '90 top',
+     start: '310 top',
     scrub: 0,
     end: 'bottom 60%',
      
@@ -607,7 +607,7 @@ gsap.to('.Photoshop',{
   yPercent:'-100',
   scrollTrigger: {
     trigger:'#Home',
-   start: '90 top',
+     start: '310 top',
     scrub: 0,
     end: 'bottom 60%',
      
@@ -620,7 +620,7 @@ gsap.to('.ReactImgs',{
   yPercent:'50',
   scrollTrigger: {
     trigger:'#Home',
-   start: '90 top',
+     start: '310 top',
     scrub: 0,
     end: 'bottom 60%',
      
@@ -633,7 +633,7 @@ gsap.to('.Jira',{
   yPercent:'-50',
   scrollTrigger: {
     trigger:'#Home',
-   start: '90 top',
+     start: '310 top',
     scrub: 0,
     end: 'bottom 60%',
      
@@ -646,7 +646,7 @@ gsap.to('.Sketch',{
   yPercent:'-150',
   scrollTrigger: {
     trigger:'#Home',
-   start: '90 top',
+     start: '310 top',
     scrub: 0,
     end: 'bottom 60%',
      
@@ -659,7 +659,7 @@ gsap.to('.Bootstrap',{
   yPercent:'150',
   scrollTrigger: {
     trigger:'#Home',
-   start: '90 top',
+     start: '310 top',
     scrub: 0,
     end: 'bottom 60%',
      
@@ -672,7 +672,7 @@ gsap.to('.Wordpress',{
   yPercent:'-250',
   scrollTrigger: {
     trigger:'#Home',
-   start: '90 top',
+     start: '310 top',
     scrub: 0,
     end: 'bottom 60%',
      
@@ -685,7 +685,7 @@ gsap.to('.Nginx',{
   yPercent:'-300',
   scrollTrigger: {
     trigger:'#Home',
-   start: '90 top',
+     start: '310 top',
     scrub: 0,
     end: 'bottom 60%',
      
@@ -698,7 +698,7 @@ gsap.to('.Illustrator',{
   yPercent:'-150',
   scrollTrigger: {
     trigger:'#Home',
-   start: '90 top',
+     start: '310 top',
     scrub: 0,
     end: 'bottom 60%',
      
