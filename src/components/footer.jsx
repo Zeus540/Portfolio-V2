@@ -113,7 +113,7 @@
             <RightContainer data-aos='slide-left'>
              <RightImgContainer src={me} alt=""/>
             </RightContainer>
-
+s
         </ContentContainer>
      
         </Container>

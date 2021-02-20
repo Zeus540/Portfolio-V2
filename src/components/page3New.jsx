@@ -1,9 +1,14 @@
-import React, {Component} from 'react';
+import React, {useEffect} from 'react';
 import styled from 'styled-components';
-import Port from '../images/me3.png'
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import Body from '../images/me3.png'
+import Head from '../images/forhead.png'
+import Brain from '../images/brain.png'
+import {gsap} from 'gsap';
+
+import {ScrollTrigger} from 'gsap/ScrollTrigger';
 import Typical from 'react-typical'
+import Typical2 from 'react-typical'
+gsap.registerPlugin(ScrollTrigger);
 
 const Container = styled.div`
 
@@ -19,11 +24,13 @@ width: 40vw;
 overflow:hidden;
 margin:0px;
 position: relative;
-margin: 0vw 0% 5vw 5vw;
+margin: 5vw 0% 5vw 5vw;
+
 @media (min-width: 1px) and (max-width: 426px) {
   width: 84%;
   padding: 5vw;
   margin: 0vw;
+  top: 0vw;
    }
    
 `
@@ -50,8 +57,9 @@ height:100%
 width:100vw; 
 margin:0px;
 position: relative;
+
 @media (min-width: 1px) and (max-width: 426px) {
-  
+  padding-left: 5vw;
    }
 `
 
@@ -68,8 +76,10 @@ color:white;
 font-family:arial;
 margin:0px;
 font-size:2vw;
-margin: 5vw 0% 5vw 5vw;
-
+margin: 5vw 0% 0vw 5vw;
+width:50vw
+z-index: 50;
+position: relative;
 @media (min-width: 1px) and (max-width: 426px) {
 font-size:4vw; 
 
@@ -88,12 +98,13 @@ font-weight:bolder;
    }
 `
 
-const Heading2 =styled.h1`
+const Heading2 =styled.div`
 font-size:7vw;
 color:white;
 font-family:arial;
 margin:2vw 0%;
 font-weight:bolder;
+max-height:200px;
 @media (min-width: 1px) and (max-width: 426px) {
   font-size:11vw; 
    }
@@ -148,7 +159,7 @@ height:100%;
 `
 
 const RightContainer = styled.div`
-overflow:hidden
+
 display:flex;
 
 position:absolute;
@@ -160,8 +171,27 @@ right:4vw;
 `
 
 const RightContainerImg = styled.img`
-height: 40vw;
-    width: 25vw;
+height: 30vw;
+    width: 30vw;
+   position:relative;
+   z-index:5;
+@media (min-width: 1px) and (max-width: 426px) {
+  width: 49vw;
+
+  height: 82vw;
+  display:none;
+ }
+ @media (min-width: 768px) and (max-width: 1024px)   {
+
+
+ }
+`
+const BrainImg = styled.img`
+position: absolute;
+right: 9.5vw;
+top: -4vw;
+width: 11vw;
+height: 9vw;
    
 @media (min-width: 1px) and (max-width: 426px) {
   width: 49vw;
@@ -170,8 +200,27 @@ height: 40vw;
   display:none;
  }
  @media (min-width: 768px) and (max-width: 1024px)   {
-  width: 30vw;
-  height: 44vw;
+
+
+ }
+`
+const HeadImg = styled.img`
+position: absolute;
+right: 9.4vw;
+top: -5.2vw;
+width: 11.6vw;
+height: revert;
+z-index: 2;
+}
+   
+@media (min-width: 1px) and (max-width: 426px) {
+  width: 49vw;
+
+  height: 82vw;
+  display:none;
+ }
+ @media (min-width: 768px) and (max-width: 1024px)   {
+
 
  }
 `
@@ -180,25 +229,60 @@ height: 100%;
 width: 100%;
 padding-top: 2vw;
 margin-bottom: 2vw;
+position: relative;
+    z-index: 3;
 @media (min-width: 426px)  {
   display:none;
  }
 `
+const BrainImgMobile = styled.img`
+position: absolute;
+left: 34.5vw;
+top: -11vw;
+z-index: 1;
+width: 37vw;
+@media (min-width: 426px)  {
+  display:none;
+ }
+`
+const HeadImgMobile = styled.img`
+position: absolute;
+left: 33.5vw;
+top: -14.2vw;
+z-index: 2;
+width: 37vw;
+@media (min-width: 426px)  {
+  display:none;
+ }
 
-class Page3New extends Component {
-  componentDidMount(){
-    AOS.init({
-      duration : 1000
-    })
+`
+function Page3New() {
+
+
+useEffect(() =>{
+
+gsap.to('.Head',{
+  x:'0',
+  duration: 20,
+  y:'-150',
+
+  scrollTrigger: {
+    trigger:'#Home',
+    start: 'top',
+    end: 'bottom 60%',
+    toggleActions: 'restart complete reverse reset'
   }
-render() {
+
+})
+
+},[]);
  
     return (
       
       <Container id="Home">
         <TypicalHolder>
         <Typical
-              steps={['Hello!', 1000,'Hola!',1000,'Bonjour!',1000,'Konnichiwa!',1000,'God dag!',1000,'Shalom!',1000,]}
+              steps={['Hello!', 1500,'Hola!',1500,'Bonjour!',1500,'Konnichiwa!',1500,'God dag!',1500,'Shalom!',1500,]}
               loop={Infinity}
               wrapper={"h1"}
             />
@@ -208,14 +292,20 @@ render() {
          <HeadingAnimated >
         
              <Heading3 > I am a</Heading3>
-        <Heading2   className="text-flicker-in-glow">CREATIVE FRONT-END<br/></Heading2>
-        <Focus className="text-flicker-in-glow">DEVELOPER</Focus>
+        <Heading2  >  <Typical2
+              steps={['WEB DEVELOPER', 2500,'UI / UX DESIGNER',2500,'ANIMAL LOVER',2500,'3D MODELER / ARTIST',2500,]}
+              loop={Infinity}
+              wrapper={"h2"}
+            /><br/></Heading2>
+        
         </HeadingAnimated>
 
         <Flex>
      <LeftContainer>
       <Holder2>
-        <RightContainerImgMobile src={Port} alt="" data-aos='slide-right'/>
+      <HeadImgMobile src={Head} className="Head" alt="" />
+      <BrainImgMobile src={Brain} alt="" />
+        <RightContainerImgMobile src={Body} alt="" />
         </Holder2>
 
         <Holder>
@@ -230,15 +320,16 @@ I am very skilled in my craft</Para>
      
      
       <RightContainer >
-      
-      <RightContainerImg src={Port} alt="" data-aos='slide-right'/>
+      <HeadImg src={Head} className="Head" alt="" />
+      <BrainImg src={Brain} alt="" />
+      <RightContainerImg src={Body} alt="" />
       
       </RightContainer>
       </Flex>
 
       </Container>
   );
-  }
+  
 }
 
 export default Page3New;
