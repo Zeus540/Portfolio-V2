@@ -699,7 +699,7 @@ gsap.to('.Illustrator',{
   scrollTrigger: {
     trigger:'#Home',
    start: '90 top',
-    scrub: 1,
+ 
     end: '90 top',
      
   }
