@@ -170,7 +170,30 @@ font-family:arial;
   font-size:13vw; 
    }
 `
-
+const Focus2Mobile =styled.span`
+font-size: 8vw;
+color: white;
+font-weight: bold;
+margin: 3vw 0px 0px 0px;
+font-family: arial;
+line-height: 28px;
+letter-spacing: 1px;
+@media (min-width: 426px){
+  display:none
+   }
+`
+const Focus2 =styled.span`
+font-size: 2.5vw;
+color: white;
+font-weight: bold;
+margin: 3vw 0px 0px 0px;
+font-family: arial;
+line-height: 2.5vw;
+letter-spacing: 1px;
+@media (max-width: 426px){
+  display:none
+   }
+`
 const LeftContainer = styled.div`
 height:100%;
 width: 65%;
@@ -249,8 +272,8 @@ z-index: 2;
 const RightContainerImgMobile = styled.img`
 height: 100%;
 width: 100%;
-padding-top: 2vw;
-margin-bottom: 2vw;
+
+margin-bottom: 5vw;
 position: relative;
     z-index: 5;
 @media (min-width: 426px)  {
@@ -270,7 +293,7 @@ width: 37vw;
 const HeadImgMobile = styled.img`
 position: absolute;
 left: 33.5vw;
-top: -14.2vw;
+top: -16.4vw;
 z-index: 6;
 width: 37vw;
 @media (min-width: 426px)  {
@@ -307,8 +330,8 @@ width: 0.5vw;
  }
  @media (min-width: 1441px) and (max-width: 1980px)  {
   position: absolute;
-  left: 11vw;
-  top: -1.2vw;
+  left: 13vw;
+  top: -4.2vw;
  }
 `
 const HtmlImg = styled.img`
@@ -474,6 +497,11 @@ position: absolute;
  }
 
 `
+
+const ImgHolder = styled.div`
+text-align:right;
+`
+
 function Page3New() {
 
   useEffect(() =>{
@@ -713,8 +741,8 @@ gsap.to('.Illustrator',{
       <Container id="Home">
         <TypicalHolder>
         <Typical
-              steps={['Hello!', 1500,'Hola!',1500,'Bonjour!',1500,'Konnichiwa!',1500,'God dag!',1500,'Shalom!',1500,]}
-              loop={Infinity}
+              steps={['God dag!', 1500,'Bonjour!',1500,'Konnichiwa!',1500,'Hello!',1500,]}
+              loop={1}
               wrapper={"h1"}
             />
              <Heading data-aos='slide-up'> my name is Zaheer.</Heading>
@@ -723,7 +751,13 @@ gsap.to('.Illustrator',{
          <HeadingAnimated >
         
              <Heading3 > I am a</Heading3>
-        <Heading2  > <Focus >CREATIVE<br/>DEVELOPER</Focus></Heading2>
+        <Heading2  > 
+        <Typical
+              steps={['CREATIVE DEVELOPER', 1500,'UI / UX DESINGER',1500,'ANIMAL LOVER',1500,'3D ARTIST / MODELER',1500,'FREELANCER',1500,]}
+              loop={Infinity}
+              wrapper={"h1"}
+            />
+          <Focus ></Focus></Heading2>
         
         </HeadingAnimated>
 
@@ -733,15 +767,21 @@ gsap.to('.Illustrator',{
       <HeadImgMobile src={Head} className="Head" alt="" />
       <BrainImgMobile src={Brain} alt="" />
         <RightContainerImgMobile src={Body} alt="" />
+        <Focus2Mobile>BASED IN</Focus2Mobile><br/>
+      <Focus2Mobile>CAPETOWN <br/> SOUTHAFRICA</Focus2Mobile>
         </Holder2>
 
         <Holder>
-          <Para data-aos='slide-up'>I have always had a passion for learning and trying new things. I consider myself a hardworking and reliable person. I like applying new methods and ideas to traditional problem solving. I Also enjoy working on new and exciting projects that allow me to express my creativity and opinions </Para>
+          <Para data-aos='slide-up'>
+          I have always had a passion for learning and trying new things. I consider myself a hardworking and reliable person. I like applying new methods and ideas to traditional problem solving. I Also enjoy working on new and exciting projects that allow me to express my creativity and opinions 
+            </Para>
 
 
-          <Para data-aos='slide-up'>I am a professional who worked for a Cape Town based Media Agency called Digitas Liquorice where I worked on names such as purity Unilever and Ola to name a few.
+          <Para data-aos='slide-up'>
+            I am a professional who worked for a Cape Town based Media Agency called Digitas Liquorice where I worked on names such as purity Unilever and Ola to name a few.
 I am very skilled in my craft</Para>
         </Holder>
+      
      </LeftContainer>
 
      
@@ -766,12 +806,15 @@ I am very skilled in my craft</Para>
       <SketchImg src={Sketch}  alt="" className="Sketch" />
     </Skills>
     
-
+      <ImgHolder >
       <HeadImg src={Head} className="Head" alt="" />
       <BrainImg src={Brain} alt="" />
       <RightContainerImg src={Body} alt="" />
-      
+      <Focus2>BASED IN</Focus2><br/>
+      <Focus2>CAPETOWN <br/> SOUTHAFRICA</Focus2>
+      </ImgHolder>
       </RightContainer>
+
       </Flex>
 
       </Container>

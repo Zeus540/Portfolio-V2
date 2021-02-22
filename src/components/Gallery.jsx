@@ -106,7 +106,7 @@ class Gallery1 extends Component {
  <ProjectHeading  >Space</ProjectHeading>
  </a>
 <Heading  >INTERACTIVE INFO WEBSITE</Heading>
-<Heading  >JAVASCIPT - GSAP - SCSS - HTML </Heading>
+<Heading  >JAVASCRIPT - GSAP - SCSS - HTML </Heading>
 
 <Heading  >
 <a href="https://github.com/Zeus540/Gallaxy" target="_blank" rel="noopener noreferrer">
