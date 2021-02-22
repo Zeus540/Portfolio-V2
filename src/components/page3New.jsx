@@ -20,7 +20,7 @@ import Mailchimp from '../images/mailchimp.png'
 import Linux from '../images/linux.png'
 import Illustrator from '../images/illustrator.png'
 import Typical from 'react-typical'
-import Typical2 from 'react-typical'
+
 
 import {gsap} from 'gsap';
 
