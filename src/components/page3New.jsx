@@ -325,8 +325,8 @@ width: 0.5vw;
  }
  @media (min-width: 1026px) and (max-width: 1440px)  {
   position: absolute;
-  left: 11vw;
-  top: -4.2vw;
+  left: 13vw;
+  top: -3.2vw;
  }
  @media (min-width: 1441px) and (max-width: 1980px)  {
   position: absolute;
