@@ -121,6 +121,7 @@ font-size:7vw;
 color:white;
 font-family:arial;
 margin:2vw 0%;
+margin-bottom:0;
 font-weight:bolder;
 min-height: 360px;
 @media (min-width: 1px) and (max-width: 425px) {
@@ -137,7 +138,7 @@ min-height: 360px;
    @media (min-width: 1026px) and (max-width: 1440px)  {
   
    }
-   @media (min-width: 1441px) and (max-width: 1980px)  {
+   @media (min-width: 1441px) and (max-width: 1920px)  {
     min-height: 300px;
    }
 `
@@ -527,7 +528,7 @@ function Page3New() {
       scrollTrigger: {
         trigger:'#Home',
         start: '90 top',
-        scrub: 0.2,
+        scrub: 0.4,
        
         end: '90 top',
      
@@ -545,7 +546,7 @@ gsap.to('.Html',{
   scrollTrigger: {
     trigger:'#Home',
      start: '90 top',
-    scrub: 0.2,
+    scrub: 0.4,
     end: 'bottom 60%',
      
   }
@@ -558,7 +559,7 @@ gsap.to('.Git',{
   scrollTrigger: {
     trigger:'#Home',
     start: '90 top',
-    scrub: 0.2,
+    scrub: 0.4,
     end: 'bottom 60%',
      
   }
@@ -571,7 +572,7 @@ gsap.to('.Sass',{
   scrollTrigger: {
     trigger:'#Home',
     start: '90 top',
-    scrub: 0.2,
+    scrub: 0.4,
     end: 'bottom 60%',
      
   }
@@ -585,7 +586,7 @@ gsap.to('.Javascript',{
   scrollTrigger: {
     trigger:'#Home',
     start: '90 top',
-    scrub: 0.2,
+    scrub: 0.4,
     end: 'bottom 60%',
      
   }
@@ -598,7 +599,7 @@ gsap.to('.Npm',{
   scrollTrigger: {
     trigger:'#Home',
     start: '90 top',
-    scrub: 0.2,
+    scrub: 0.4,
     end: 'bottom 60%',
      
   }
@@ -611,7 +612,7 @@ gsap.to('.Css',{
   scrollTrigger: {
     trigger:'#Home',
     start: '90 top',
-    scrub: 0.2,
+    scrub: 0.4,
     end: 'bottom 60%',
      
   }
@@ -624,7 +625,7 @@ gsap.to('.Linux',{
   scrollTrigger: {
     trigger:'#Home',
     start: '90 top',
-    scrub: 0.2,
+    scrub: 0.4,
     end: 'bottom 60%',
      
   }
@@ -637,7 +638,7 @@ gsap.to('.Mailchimp',{
   scrollTrigger: {
     trigger:'#Home',
     start: '90 top',
-    scrub: 0.2,
+    scrub: 0.4,
     end: 'bottom 60%',
      
   }
@@ -650,7 +651,7 @@ gsap.to('.Photoshop',{
   scrollTrigger: {
     trigger:'#Home',
     start: '90 top',
-    scrub: 0.2,
+    scrub: 0.4,
     end: 'bottom 60%',
      
   }
@@ -663,7 +664,7 @@ gsap.to('.ReactImgs',{
   scrollTrigger: {
     trigger:'#Home',
     start: '90 top',
-    scrub: 0.2,
+    scrub: 0.4,
     end: 'bottom 60%',
      
   }
@@ -676,7 +677,7 @@ gsap.to('.Jira',{
   scrollTrigger: {
     trigger:'#Home',
     start: '90 top',
-    scrub: 0.2,
+    scrub: 0.4,
     end: 'bottom 60%',
      
   }
@@ -689,7 +690,7 @@ gsap.to('.Sketch',{
   scrollTrigger: {
     trigger:'#Home',
     start: '90 top',
-    scrub: 0.2,
+    scrub: 0.4,
     end: 'bottom 60%',
      
   }
@@ -702,7 +703,7 @@ gsap.to('.Bootstrap',{
   scrollTrigger: {
     trigger:'#Home',
     start: '90 top',
-    scrub: 0.2,
+    scrub: 0.4,
     end: 'bottom 60%',
      
   }
@@ -715,7 +716,7 @@ gsap.to('.Wordpress',{
   scrollTrigger: {
     trigger:'#Home',
     start: '90 top',
-    scrub: 0.2,
+    scrub: 0.4,
     end: 'bottom 60%',
      
   }
@@ -728,7 +729,7 @@ gsap.to('.Nginx',{
   scrollTrigger: {
     trigger:'#Home',
     start: '90 top',
-    scrub: 0.2,
+    scrub: 0.4,
     end: 'bottom 60%',
      
   }
@@ -741,7 +742,7 @@ gsap.to('.Illustrator',{
   scrollTrigger: {
     trigger:'#Home',
     start: '90 top',
-    scrub: 0.2,
+    scrub: 0.4,
     end: 'bottom 60%',
      
   }
