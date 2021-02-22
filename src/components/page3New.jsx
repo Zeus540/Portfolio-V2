@@ -122,9 +122,23 @@ color:white;
 font-family:arial;
 margin:2vw 0%;
 font-weight:bolder;
-
-@media (min-width: 1px) and (max-width: 426px) {
-  font-size:11vw; 
+min-height: 360px;
+@media (min-width: 1px) and (max-width: 425px) {
+  font-size:11vw;
+  min-height: 104px;
+   }
+  
+   @media (min-width: 426px) and (max-width: 768px)  {
+  
+   }
+   @media (min-width: 769px) and (max-width: 1025px)  {
+ 
+   }
+   @media (min-width: 1026px) and (max-width: 1440px)  {
+  
+   }
+   @media (min-width: 1441px) and (max-width: 1980px)  {
+    min-height: 300px;
    }
 `
 
@@ -753,7 +767,7 @@ gsap.to('.Illustrator',{
              <Heading3 > I am a</Heading3>
         <Heading2  > 
         <Typical
-              steps={['CREATIVE DEVELOPER', 1500,'UI / UX DESINGER',1500,'ANIMAL LOVER',1500,'3D ARTIST / MODELER',1500,'FREELANCER',1500,]}
+              steps={['CREATIVE DEVELOPER', 1500,'UI / UX DESINGER',1500,'3D ARTIST / MODELER',1500,]}
               loop={Infinity}
               wrapper={"h1"}
             />
