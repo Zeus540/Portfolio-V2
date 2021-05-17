@@ -16,20 +16,37 @@ height: 100%;
 margin:0 auto;
 overflow:hidden;
 width: 80vw;
+margin-bottom:5vw;
 @media (min-width: 1px) and (max-width: 426px) {
   margin-bottom:20vw;
   width: 80vw;
   }
 `
+const ImgHolder =styled.div`
+width:60vw;
+opacity:0;
+@media (min-width: 1px) and (max-width: 426px) {
+  width:100%;
+  opacity:1;
+ }
+`
 
 const  Holder = styled.div`
 display:flex;
 margin: 0px auto;
-padding-bottom: 0px;
+padding-bottom: 20px;
 flex-direction:row;
-width:80vw;
+width:30vw;
 height: inherit;
-margin: 10vw 0vw;
+margin: 5vw 0vw;
+border-bottom: #8BC34A 2px solid;
+&:hover{
+  width:75vw;
+ transition: all 2s ease-in-out;
+  ${ImgHolder}{
+    opacity:1;
+  }
+}
 @media (min-width: 1px) and (max-width: 426px) {
  width:100%;
  display: flex;
@@ -55,6 +72,7 @@ font-size:6vw;
 color:white;
 font-family:arial;
 font-weight:bolder;
+width:85%;
 @media (min-width: 1px) and (max-width: 426px) {
   font-size:9vw;
   margin-bottom:2vw;
@@ -79,13 +97,7 @@ height:100%
   height:100%
  }
 `
-const ImgHolder =styled.div`
-width:60vw;
-@media (min-width: 1px) and (max-width: 426px) {
-  width:100%;
 
- }
-`
 
 class Gallery1 extends Component {
  componentDidMount(){
@@ -99,7 +111,7 @@ class Gallery1 extends Component {
       
       <Container >
     
-    <Holder data-aos='slide-right'> 
+    <Holder data-aos='slide-up'> 
  
  <HolderInner>
  <a href="https://galaxy.zaheerroberts.co.za/" target="_blank" rel="noopener noreferrer">
@@ -124,7 +136,7 @@ VIEW CODE
 
      </Holder>
     
-    <Holder data-aos='slide-left'> 
+    <Holder data-aos='slide-up'> 
  
  <HolderInner>
  <a href="https://todo.zaheerroberts.co.za/" target="_blank" rel="noopener noreferrer">
@@ -149,7 +161,7 @@ VIEW CODE
 
      </Holder>
     
-    <Holder data-aos='slide-right'> 
+    <Holder data-aos='slide-up'> 
  
  <HolderInner>
  <a href="https://rottweiler.zaheerroberts.co.za" target="_blank" rel="noopener noreferrer">
@@ -175,7 +187,7 @@ VIEW CODE
 
      
      
-     <Holder data-aos='slide-left'> 
+     <Holder data-aos='slide-up'> 
  
  <HolderInner>
  <a href="https://nike.zaheerroberts.co.za" target="_blank" rel="noopener noreferrer">
@@ -200,7 +212,7 @@ VIEW CODE
      </Holder>
 
 
-     <Holder data-aos='slide-right'> 
+     <Holder data-aos='slide-up'> 
  
  <HolderInner>
  <a href="https://brightfuture.zaheerroberts.co.za/" target="_blank" rel="noopener noreferrer">
@@ -224,7 +236,7 @@ VIEW CODE
 
      </Holder>
 
-  <Holder data-aos='slide-left'> 
+  <Holder data-aos='slide-up'> 
  
       <HolderInner>
       <a href="https://kkwe.co.za/" target="_blank" rel="noopener noreferrer">

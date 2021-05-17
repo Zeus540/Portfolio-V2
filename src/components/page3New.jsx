@@ -53,7 +53,6 @@ margin: 0vw 0% 5vw 5vw;
 `
 
 const TypicalHolder = styled.div`
-overflow:hidden;
 margin:0px;
 position: relative;
 font-family: arial;
@@ -130,13 +129,13 @@ min-height: 360px;
    }
   
    @media (min-width: 426px) and (max-width: 768px)  {
-  
+    min-height: 100px;
    }
    @media (min-width: 769px) and (max-width: 1025px)  {
- 
+    min-height: 180px;
    }
    @media (min-width: 1026px) and (max-width: 1440px)  {
-  
+    min-height: 220px;
    }
    @media (min-width: 1441px) and (max-width: 1920px)  {
     min-height: 300px;
@@ -203,7 +202,7 @@ color: white;
 font-weight: bold;
 margin: 3vw 0px 0px 0px;
 font-family: arial;
-line-height: 2.5vw;
+line-height: 2.6vw;
 letter-spacing: 1px;
 @media (max-width: 426px){
   display:none
@@ -343,7 +342,7 @@ width: 0.5vw;
   left: 13vw;
   top: -3.2vw;
  }
- @media (min-width: 1441px) and (max-width: 1980px)  {
+ @media (min-width: 1441px) and (max-width: 1920px)  {
   position: absolute;
   left: 13vw;
   top: -4.2vw;
@@ -515,6 +514,7 @@ position: absolute;
 
 const ImgHolder = styled.div`
 text-align:right;
+line:height:300px
 `
 
 function Page3New() {

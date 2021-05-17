@@ -7,7 +7,7 @@ import 'aos/dist/aos.css';
 
 const Container = styled.div`
 overflow: hidden;
-margin: 28vw 0% 8vw 0%;
+margin: 20vw 0vw 20vw 0vw;
 
 @media (min-width: 1px) and (max-width: 426px) {
  flex-direction:column
@@ -20,7 +20,7 @@ margin:40vw 0vw;
 
   }
  @media (min-width: 769px) and (max-width: 1024px) {
-  margin: 33vw 0vw 9vw 0vw;
+  margin: 20vw 0vw 20vw 0vw;
   }
 `
 
