@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import 'react-alice-carousel/lib/alice-carousel.css'
 import Kkwe from '../images/Kkwe.png'
-import Galaxy from '../images/Galaxy.png'
+import Galaxy from '../images/Galaxy2.png'
 import Crud from '../images/Crud.png'
 
 import Bright from '../images/Bright.png'
@@ -22,12 +22,13 @@ margin-bottom:5vw;
   width: 80vw;
   }
 `
-const ImgHolder =styled.div`
+const ImgHolder = styled.div`
 width:60vw;
-opacity:0;
+transform: perspective(0px) rotateY(-9deg);
+transition: all 0.2s ease-in-out;
 @media (min-width: 1px) and (max-width: 426px) {
   width:100%;
-  opacity:1;
+  
  }
 `
 
@@ -36,15 +37,15 @@ display:flex;
 margin: 0px auto;
 padding-bottom: 20px;
 flex-direction:row;
-width:30vw;
+width:75vw;
 height: inherit;
 margin: 5vw 0vw;
-border-bottom: #8BC34A 2px solid;
 &:hover{
   width:75vw;
  transition: all 2s ease-in-out;
+ 
   ${ImgHolder}{
-    opacity:1;
+    transform: perspective(200px) rotateY(-9deg);
   }
 }
 @media (min-width: 1px) and (max-width: 426px) {
@@ -73,6 +74,7 @@ color:white;
 font-family:arial;
 font-weight:bolder;
 width:85%;
+cursor: pointer;
 @media (min-width: 1px) and (max-width: 426px) {
   font-size:9vw;
   margin-bottom:2vw;
@@ -115,7 +117,7 @@ class Gallery1 extends Component {
  
  <HolderInner>
  <a href="https://galaxy.zaheerroberts.co.za/" target="_blank" rel="noopener noreferrer">
- <ProjectHeading  >Space</ProjectHeading>
+ <ProjectHeading  >Space Bound</ProjectHeading>
  </a>
 <Heading  >INTERACTIVE INFO WEBSITE</Heading>
 <Heading  >JAVASCRIPT - GSAP - SCSS - HTML </Heading>
@@ -240,7 +242,7 @@ VIEW CODE
  
       <HolderInner>
       <a href="https://kkwe.co.za/" target="_blank" rel="noopener noreferrer">
-      <ProjectHeading  >Kkwe</ProjectHeading>
+      <ProjectHeading  >Kkwe Events</ProjectHeading>
       </a>
   <Heading  >EVENTS PLANNER WEBSITE</Heading>
   <Heading  >REACT.JS - AOS </Heading>

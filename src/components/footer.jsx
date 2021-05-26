@@ -6,7 +6,7 @@
 
   const Container = styled.div`
   overflow: hidden;
-  background: black;
+ 
   justify-content: space-between;
   color:white;
   font-family:arial;
@@ -25,6 +25,7 @@
   `
 
   const LeftContainer = styled.div`
+  background: #8bc34a;
       color:white;
       font-family:arial;
       min-width:70vw;
@@ -56,8 +57,8 @@
       font-size: 8vw;
       text-align:center;
       font-weight:bolder;
-      overflow:hidden
-   
+      overflow:hidden;
+   color:#1a1a1a;
   @media (min-width: 1px) and (max-width: 426px) {
       font-size: 10vw;
      }
@@ -85,6 +86,7 @@
           bottom:2vw;
           right:2vw;
           font-weight:bold;
+          color:#1a1a1a;
         @media (min-width: 1px) and (max-width: 426px) {
           font-size:2.2vw;
           }
@@ -100,17 +102,17 @@
   
       return (
         
-        <Container >
+        <Container  data-aos='slide-up'>
         <ContentContainer>
 
-            <LeftContainer data-aos='slide-right'>
+            <LeftContainer>
              <MainHeadingHolder>
              <a href="mailto:hello@odinsgate.co.za"><MainHeading >SAY HI</MainHeading></a>
              </MainHeadingHolder>
              <Copyright >ALL RIGHT RESERVED COPYRIGHT &copy; 2020</Copyright>
             </LeftContainer>
 
-            <RightContainer data-aos='slide-left'>
+            <RightContainer >
              <RightImgContainer src={me} alt=""/>
             </RightContainer>
         </ContentContainer>

@@ -4,7 +4,14 @@
   import 'aos/dist/aos.css';
   import Liqourice from '../images/liquorice.png';
   import Kkwe from '../images/kkwel.png';
-
+  import Hyperboliq from '../images/hyperboliq.png';
+  import Ola from '../images/ola.png';
+  import Tribeca from '../images/tribeca.png';
+  import Usn from '../images/usn.png';
+  import Vts from '../images/Vts.png';
+  import Purity from '../images/purity.png';
+  import Unilever from '../images/unilever.png';
+  
   const Container = styled.div`
   overflow: hidden;
 
@@ -90,14 +97,66 @@ const MainHeadingContainer = styled.div`
           <MainHeading data-aos='slide-up'>HIGHLIGHTS</MainHeading>
           </MainHeadingContainer>
         <div className="timeline" >
-  
-   
+
+        <div className="container leftContainer leftImp" data-aos='slide-up'>
+      <div className="content Green">
+        <Heading>2021</Heading>
+      </div>
+    </div>
+
+    <div className="container leftContainer leftImp" data-aos='slide-up'>
+      <div className="content Green">
+      <img src={Usn} alt="" width="100px"/>
+        <Para>WORKED ON USN</Para>
+      </div>
+    </div>
+
+    <div className="container leftContainer leftImp" data-aos='slide-up'>
+      <div className="content Green">
+      <img src={Vts} alt="" width="80px"/>
+        <Para>WORKED ON VTS</Para>
+      </div>
+    </div>
+
+    <div className="container leftContainer leftImp" data-aos='slide-up'>
+      <div className="content Green">
+      <img src={Tribeca} alt="" width="80px"/>
+        <Para>WORKED ON TRIBECA</Para>
+      </div>
+    </div>
+
+    <div className="container leftContainer leftImp" data-aos='slide-up'>
+      <div className="content Green">
+      <img src={Hyperboliq} alt="" width="150px"/>
+        <Para>STARTED WORKING AT HYPERBOLIQ</Para>
+      </div>
+    </div>
+
+    <div className="container leftContainer leftImp" data-aos='slide-up'>
+      <div className="content Green">
+     
+        <Para>STARTED A JAVASCRIPT ALGORITHMS AND DATA STRUCTURES COURSE @ FREE CODECAMP</Para>
+      </div>
+    </div>
 
     <div className="container right"  data-aos='slide-up'>
       <div className="content">
         <Heading>2020</Heading>
-        <Para>BUILT A WEBSITE FOR A SMALL BUSINESS</Para>
-        <img src={Kkwe} alt="" width="150px"/>
+      </div>
+    </div>
+
+    <div className="container right"  data-aos='slide-up'>
+      <div className="content">
+        <Para>FOUNDED ODINSGATE MEDIA</Para>
+      </div>
+    </div>
+
+   
+    <div className="container right"  data-aos='slide-up'>
+      <div className="content">
+      <img src={Kkwe} alt="" width="150px"/>
+        <Para>BUILT A WEBSITE FOR KKWE EVENTS</Para>
+      
       </div>
     </div>
     <div className="container right"  data-aos='slide-up'>
@@ -105,26 +164,38 @@ const MainHeadingContainer = styled.div`
         <Para>STARTED FREELANCING</Para>
       </div>
     </div>
+       
     <div className="container leftContainer leftImp" data-aos='slide-up'>
       <div className="content Green">
         <Heading>2019</Heading>
+     
+      </div>
+    </div>
+
+    <div className="container leftContainer leftImp" data-aos='slide-up'>
+      <div className="content Green">
+      <img src={Liqourice} alt="" width="100px"/>
         <Para>STARTED WORKING AT DIGITAS LIQUORICE</Para>
-        <img src={Liqourice} alt="" width="100px"/>
+   
       </div>
     </div>
     <div className="container leftContainer leftImp" data-aos='slide-up'>
       <div className="content Green">
+      <img src={Purity} alt="" width="100px"/>
         <Para>WORKED ON PURITY</Para>
       </div>
     </div>
     <div className="container leftContainer leftImp" data-aos='slide-up'>
       <div className="content Green">
+      <img src={Unilever} alt="" width="80px"/>
         <Para>WORKED ON UNILEVER </Para>
       </div>
     </div>
     <div className="container leftContainer leftImp" data-aos='slide-up'>
       <div className="content Green">
-        <Para>WORKED ON THE OLA BARBIE CAMPAIGN LANDING PAGE</Para>
+      <img src={Ola} alt="" width="100px"/>
+        <Para>WORKED ON THE OLA BARBIE CAMPAIGN</Para>
+        
       </div>
     </div>
     <div className="container right"  data-aos='slide-up'>
