@@ -11,6 +11,7 @@
   import Vts from '../images/Vts.png';
   import Purity from '../images/purity.png';
   import Unilever from '../images/unilever.png';
+  import Renault from '../images/renault.png';
   
   const Container = styled.div`
   overflow: hidden;
@@ -55,7 +56,6 @@ font-family:arial;
 font-weight:bolder;
 @media (min-width: 1px) and (max-width: 426px) {
   font-size:7vw; 
-  margin:0vw 0% 5vw 0%;
    }
 `
 
@@ -101,6 +101,12 @@ const MainHeadingContainer = styled.div`
         <div className="container leftContainer leftImp" data-aos='slide-up'>
       <div className="content Green">
         <Heading>2021</Heading>
+      </div>
+    </div>
+    <div className="container leftContainer leftImp" data-aos='slide-up'>
+      <div className="content Green">
+      <img src={Renault} alt="" width="50px"/>
+        <Para>WORKED ON RENAULT</Para>
       </div>
     </div>
 
@@ -201,6 +207,10 @@ const MainHeadingContainer = styled.div`
     <div className="container right"  data-aos='slide-up'>
       <div className="content ">
         <Heading>2018</Heading>
+      </div>
+    </div>
+    <div className="container right"  data-aos='slide-up'>
+      <div className="content ">
         <Para>GRADUATED COLLEGE</Para>
       </div>
     </div>
