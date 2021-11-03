@@ -24,7 +24,7 @@ margin-bottom:5vw;
 `
 const ImgHolder = styled.div`
 width:60vw;
-transform: perspective(0px) rotateY(-9deg);
+
 transition: all 0.2s ease-in-out;
 @media (min-width: 1px) and (max-width: 426px) {
   width:100%;
@@ -44,9 +44,7 @@ margin: 5vw 0vw;
   width:75vw;
  transition: all 2s ease-in-out;
  
-  ${ImgHolder}{
-    transform: perspective(200px) rotateY(-9deg);
-  }
+ 
 }
 @media (min-width: 1px) and (max-width: 426px) {
  width:100%;

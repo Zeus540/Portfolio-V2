@@ -15,9 +15,9 @@
   
   const Container = styled.div`
   overflow: hidden;
-
+  display:flex;
   justify-content: space-between;
-  padding-bottom:10vw;;
+  padding-bottom:10vw;
       @media (min-width: 1px) and (max-width: 426px) {
     
         
@@ -91,11 +91,12 @@ const MainHeadingContainer = styled.div`
   render() {
   
       return (
-        
-        <Container >
-          <MainHeadingContainer>
+        <>
+        <MainHeadingContainer>
           <MainHeading data-aos='slide-up'>HIGHLIGHTS</MainHeading>
           </MainHeadingContainer>
+        <Container >
+          
         <div className="timeline" >
 
         <div className="container leftContainer leftImp" data-aos='slide-up'>
@@ -218,7 +219,7 @@ const MainHeadingContainer = styled.div`
 
         </Container>
 
-        
+       </> 
     );
     }
   }
