@@ -25,7 +25,7 @@
   `
 
   const LeftContainer = styled.div`
-  background: #8bc34a;
+  background: #75d771;
       color:white;
       font-family:arial;
       min-width:70vw;

@@ -1,8 +1,9 @@
-import React, { Component } from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import 'react-alice-carousel/lib/alice-carousel.css'
 import Kkwe from '../images/Kkwe.png'
-import Galaxy from '../images/Galaxy2.png'
+import IoT from '../images/iot.gif'
+import Dash from '../images/dash.gif'
 import Crud from '../images/Crud.png'
 
 import Bright from '../images/Bright.png'
@@ -24,7 +25,7 @@ margin-bottom:5vw;
 `
 const ImgHolder = styled.div`
 width:60vw;
-
+max-height: 453px;
 transition: all 0.2s ease-in-out;
 @media (min-width: 1px) and (max-width: 426px) {
   width:100%;
@@ -32,20 +33,15 @@ transition: all 0.2s ease-in-out;
  }
 `
 
-const  Holder = styled.div`
+const Holder = styled.div`
 display:flex;
 margin: 0px auto;
 padding-bottom: 20px;
 flex-direction:row;
-width:75vw;
+
 height: inherit;
 margin: 5vw 0vw;
-&:hover{
-  width:75vw;
- transition: all 2s ease-in-out;
- 
- 
-}
+
 @media (min-width: 1px) and (max-width: 426px) {
  width:100%;
  display: flex;
@@ -54,7 +50,7 @@ margin: 5vw 0vw;
  }
 `
 
-const  HolderInner = styled.div`
+const HolderInner = styled.div`
 display:flex;
 padding-bottom: 0px;
 flex-direction:column;
@@ -66,7 +62,7 @@ width:100%;
 `
 
 
-const ProjectHeading =styled.h1`
+const ProjectHeading = styled.h1`
 font-size:6vw;
 color:white;
 font-family:arial;
@@ -78,19 +74,58 @@ cursor: pointer;
   margin-bottom:2vw;
  }
 `
+const Sup = styled.sup`
 
-const Heading =styled.h1`
+color:#75d771;
+font-family:arial;
+font-weight:bolder;
+
+@media (min-width: 1px) and (max-width: 426px) {
+
+
+ }
+`
+
+const Heading = styled.h1`
 font-size:1vw;
 color:white;
 font-family:arial;
-margin: 0.5vw 0vw 0.5vw 0.5vw;
+
 @media (min-width: 1px) and (max-width: 426px) {
   font-size: 3.5vw;
  }
 `
-const Img =styled.img`
+const HeadingF = styled.h1`
+font-size:0.7vw;
+color:white;
+font-family:arial;
+margin: 8px 0px;
+@media (min-width: 1px) and (max-width: 426px) {
+  font-size: 3.5vw;
+ }
+`
+const HeadingViewCode = styled.button`
+font-size:0.5vw;
+color:white!important;
+font-family:arial;
+margin: 1vw 0vw 1vw 0vw;
+padding:10px;
+border:none;
+background-color: #75d771;
+@media (min-width: 1px) and (max-width: 426px) {
+  font-size: 3.5vw;
+ }
+`
+const Anchor = styled.a`
+font-size:0.5vw;
+color:white!important;
+@media (min-width: 1px) and (max-width: 426px) {
+  font-size: 3.5vw;
+ }
+`
+const Img = styled.img`
 width:100%;
-height:100%
+
 @media (min-width: 1px) and (max-width: 426px) {
   margin-top:5vw; 
   width:100%;
@@ -98,166 +133,214 @@ height:100%
  }
 `
 
-
-class Gallery1 extends Component {
- componentDidMount(){
-    AOS.init({
-      duration : 1000
-    })
-  }
-  render() {
-
-    return (
-      
-      <Container >
-    
-    <Holder data-aos='slide-up'> 
- 
- <HolderInner>
- <a href="https://galaxy.zaheerroberts.co.za/" target="_blank" rel="noopener noreferrer">
- <ProjectHeading  >Space Bound</ProjectHeading>
- </a>
-<Heading  >INTERACTIVE INFO WEBSITE</Heading>
-<Heading  >JAVASCRIPT - GSAP - SCSS - HTML </Heading>
-
-<Heading  >
-<a href="https://github.com/Zeus540/Gallaxy" target="_blank" rel="noopener noreferrer">
-VIEW CODE
-</a>
-</Heading>
-</HolderInner>
-
-<ImgHolder>
-<a href="https://galaxy.zaheerroberts.co.za/" target="_blank" rel="noopener noreferrer">
-<Img src={Galaxy} alt=""/>
-</a>
-</ImgHolder>
-
-
-     </Holder>
-    
-    <Holder data-aos='slide-up'> 
- 
- <HolderInner>
- <a href="https://todo.zaheerroberts.co.za/" target="_blank" rel="noopener noreferrer">
- <ProjectHeading  >Task Manager</ProjectHeading>
- </a>
-<Heading  >TASK LOGGER WEBSITE</Heading>
-<Heading  >REACT.JS - SCSS - FIREBASE </Heading>
-
-<Heading  >
-<a href="https://github.com/Zeus540/react-firebase-crud-app" target="_blank" rel="noopener noreferrer">
-VIEW CODE
-</a>
-</Heading>
-</HolderInner>
-
-<ImgHolder>
-<a href="https://todo.zaheerroberts.co.za/" target="_blank" rel="noopener noreferrer">
-<Img src={Crud} alt=""/>
-</a>
-</ImgHolder>
-
-
-     </Holder>
-    
-    <Holder data-aos='slide-up'> 
- 
- <HolderInner>
- <a href="https://rottweiler.zaheerroberts.co.za" target="_blank" rel="noopener noreferrer">
- <ProjectHeading  >Rottweiler <br/> Care</ProjectHeading>
- </a>
-<Heading  >INFO WEBSITE</Heading>
-<Heading  >REACT.JS</Heading>
-
-<Heading  >
-<a href="https://github.com/Zeus540/Rottweiler-V2" target="_blank" rel="noopener noreferrer">
-VIEW CODE
-</a>
-</Heading>
-</HolderInner>
-<ImgHolder>
-<a href="https://rottweiler.zaheerroberts.co.za" target="_blank" rel="noopener noreferrer">
-<Img src={Rot} alt=""/>
-</a>
-</ImgHolder>
-
-
-     </Holder>
-
-     
-     
-     <Holder data-aos='slide-up'> 
- 
- <HolderInner>
- <a href="https://nike.zaheerroberts.co.za" target="_blank" rel="noopener noreferrer">
- <ProjectHeading  >Nike</ProjectHeading>
- </a>
-<Heading  >GALLERY WEBSITE</Heading>
-<Heading  >REACT.JS</Heading>
-
-<Heading  >
-<a href="https://github.com/Zeus540/Nike" target="_blank" rel="noopener noreferrer">
-VIEW CODE
-</a>
-</Heading>
-</HolderInner>
-<ImgHolder>
-<a href="https://nike.zaheerroberts.co.za" target="_blank" rel="noopener noreferrer">
-<Img src={Nike} alt=""/>
-</a>
-</ImgHolder>
-
-
-     </Holder>
-
-
-     <Holder data-aos='slide-up'> 
- 
- <HolderInner>
- <a href="https://brightfuture.zaheerroberts.co.za/" target="_blank" rel="noopener noreferrer">
- <ProjectHeading  >Bright Future</ProjectHeading>
- </a>
-<Heading  >WEBSITE</Heading>
-<Heading  >PHP - HTML - CSS </Heading>
-
-<Heading  >
-<a href="https://github.com/Zeus540/BrightFuture-php" target="_blank" rel="noopener noreferrer">
-VIEW CODE
-</a>
-</Heading>
-</HolderInner>
-<ImgHolder>
-<a href="https://brightfuture.zaheerroberts.co.za/" target="_blank" rel="noopener noreferrer">
-<Img src={Bright} alt=""/>
-</a>
-</ImgHolder>
-
-
-     </Holder>
-
-  <Holder data-aos='slide-up'> 
- 
-      <HolderInner>
-      <a href="https://kkwe.co.za/" target="_blank" rel="noopener noreferrer">
-      <ProjectHeading  >Kkwe Events</ProjectHeading>
-      </a>
-  <Heading  >EVENTS PLANNER WEBSITE</Heading>
-  <Heading  >REACT.JS - AOS </Heading>
-
-  </HolderInner>
-  <ImgHolder>
-  <a href="https://kkwe.co.za/" target="_blank" rel="noopener noreferrer">
-  <Img src={Kkwe} alt=""/>
-  </a>
-  </ImgHolder>
-  
-  
-          </Holder>
-         
-
-      </Container>
-    );
-  }
+const StackMenu = styled.div`
+width:100%;
+height:100%;
+color:red;
+line-height:22px;
+margin: 0.5vw 0vw 0.5vw 0vw;
+`
+const TabHolder = styled.div`
+display:flex;
+`
+const Tab = styled.button`
+color:white;
+padding:10px 40px;
+border:none;
+background:none;
+cursor:pointer;
+transition: padding 0.5s ease;
+&:hover {
+  background-color: #75d771;
+  padding:10px 60px;
 }
-export default Gallery1;
+`
+const ActiveTab = styled(Tab)`
+background-color: #75d771;
+padding:10px 60px;
+
+`;
+const StackMenuHeading = styled.p`
+font-size:0.8vw;
+color:white;
+font-family:arial;
+margin: 15px 0vw ;
+color:#75d771;
+cursor:pointer;
+@media (min-width: 1px) and (max-width: 426px) {
+  font-size: 3.5vw;
+  
+ }
+`
+
+
+
+function Gallery() {
+const [first, setfirst] = useState()
+const [filter, setFilter] = useState("IOT")
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000
+    })
+  }, [])
+
+  let projects = [
+    {
+      url: "https://odinsgate.co.za/",
+      sup: "IOT",
+      ProjectHeading: "SMART PLANT",
+      heading: "IOT BASED PLANT MONITOR",
+      frontend: "REACT.JS - CHART.JS - STYLED COMPONENTS - AXIOS ",
+      backend: "MYSQL - NODE.JS - EXPRESS.JS",
+      hardware: "WIFI CRICKET V1",
+      github: "https://github.com/Zeus540/IOTDashboard",
+      image: IoT,
+      showStack: false,
+      catergory:"IOT"
+    },
+    {
+      url: "https://dash.odinsgate.co.za/",
+      sup: "CRM",
+      ProjectHeading: "NEXT",
+      heading: "CRM SYSTEM",
+      frontend: "REACT.JS - CHART.JS - STYLED COMPONENTS - AXIOS ",
+      backend: "MYSQL - NODE.JS - EXPRESS.JS",
+      hardware: null,
+      github: "https://github.com/Zeus540/E-Commerce-Store-NYX",
+      image: Dash,
+      showStack: false,
+      catergory:"CRM"
+    }
+  ]
+
+  let Tabs = [
+    {
+      catergory:"IOT",
+      active:true,
+    },
+    {
+      catergory:"CRM",
+      active:false,
+    }
+  ]
+
+  const [projectsData, setProjectsData] = useState(projects)
+  const [tabsData, setTabsData] = useState(Tabs)
+  const [prevtab, setPrevTab] = useState(tabsData[0])
+
+  const toggleStackMenu = (project) => {
+    if (project.showStack == false) {
+      project.showStack = true
+      setProjectsData([...projectsData])
+    } else {
+      project.showStack = false
+      setProjectsData([...projectsData])
+    }
+  }
+
+  const handleTabChange = (e,tab)=>{
+  
+
+    for (let index = 0; index < tabsData.length; index++) {
+      const element = tabsData[index];
+
+      if(element.active === true && tab == prevtab){
+        tab.active = false
+        prevtab.active = false
+      }else{
+        tab.active = true
+        prevtab.active = false
+      }
+    }
+
+    setPrevTab(tab)
+    setFilter(e.target.value)
+  }
+
+
+  return (
+
+    <Container >
+
+      <TabHolder>
+      {tabsData.map((tab,index)=>{
+        return(
+        <>
+          {tab.active? <ActiveTab value={tab.catergory} onClick={(e)=>{handleTabChange(e,tab)}}>{tab.catergory}</ActiveTab>:<Tab value={tab.catergory} onClick={(e)=>{handleTabChange(e,tab)}}>{tab.catergory}</Tab>}
+        </>
+        
+        )
+      })}
+   
+    
+
+      </TabHolder>
+      {projectsData?.filter((p)=>{
+          if(filter == null){
+            return projectsData
+          }else{
+            return (
+              p.catergory === filter
+            )
+         
+          }
+      }).map((project, index) => {
+      
+        return (
+          <Holder data-aos='slide-up'>
+
+            <HolderInner>
+              <a href={project.url} target="_blank" rel="noopener noreferrer">
+                <span><Sup>{project.sup}</Sup><ProjectHeading  >{project.ProjectHeading}</ProjectHeading> </span>
+              </a>
+              <Heading>{project.heading}</Heading>
+              <div>
+                <StackMenuHeading onClick={() => { toggleStackMenu(project) }}>View Stack</StackMenuHeading>
+
+                {project?.showStack &&
+                  <StackMenu>
+                    <Sup>Front-End</Sup>
+                    <HeadingF>{project.frontend}</HeadingF>
+                    <Sup>Back-End</Sup>
+                    <HeadingF  >{project.backend}</HeadingF>
+                    {project.hardware !== null
+                      && 
+                      <>
+                       <Sup>Hardware</Sup>
+                    <HeadingF  >{project.hardware}</HeadingF>
+                      </>
+                    }
+                   
+                    <HeadingViewCode  >
+                      <Anchor href={project.github} target="_blank" rel="noopener noreferrer">
+                        VIEW CODE
+                      </Anchor>
+                    </HeadingViewCode>
+                  </StackMenu>
+                }
+              </div>
+
+
+
+            </HolderInner>
+
+            <ImgHolder>
+              <a href={project.url} target="_blank" rel="noopener noreferrer">
+                <Img src={project.image} alt="" />
+              </a>
+            </ImgHolder>
+
+
+          </Holder>
+        )
+      })}
+
+
+
+
+    </Container>
+  );
+}
+
+export default Gallery

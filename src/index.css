@@ -75,16 +75,14 @@ body::-webkit-scrollbar {
     background-color: #1a1a1a;
 }
 *::-webkit-scrollbar-thumb {
-    background-color: #8BC34A;
+    background-color: #75d771;
     
 }
 a{
-    color:#8BC34A;
+
     text-decoration: none;
 }
-a:hover{
-    text-decoration: line-through;
-}
+
 
 .text-flicker-in-glow
 {animation:text-flicker-in-glow 4s linear both}
@@ -137,7 +135,7 @@ a:hover{
     content: '';
     position: absolute;
     width: 6px;
-    background-color: #8BC34A;
+    background-color: #75d771;
     top: 0;
     bottom: 0;
     left: 50%;
@@ -185,9 +183,9 @@ a:hover{
     width: 0;
     z-index: 1;
     right: 31px;
-    border: medium solid #8BC34A;
+    border: medium solid #75d771;
     border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent #8BC34A;
+    border-color: transparent transparent transparent #75d771;
   }
   /* Add arrows to the right container (pointing left) */
   .right::before {
@@ -239,9 +237,9 @@ a:hover{
     }
     .leftContainer::before {
       left: 61px;
-      border: medium solid #8bc34a;
+      border: medium solid #75d771;
       border-width: 10px 10px 10px 0;
-      border-color: transparent #8bc34a transparent transparent;
+      border-color: transparent #75d771 transparent transparent;
       }
     /* Make sure all circles are at the same spot */
     .left::after, .right::after {
@@ -255,7 +253,7 @@ a:hover{
   }
 
   .Green{
-    background-color: #8BC34A;
+    background-color: #75d771;
   }
 
 

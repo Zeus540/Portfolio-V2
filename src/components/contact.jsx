@@ -64,7 +64,7 @@ background:transparent;
 const Submit=styled.input`
 border:none;
 min-height:40px;
-background: #8bc34a;
+background: #75d771;
 margin-bottom:5px;
 margin-top:1.5vw;
 color:white;

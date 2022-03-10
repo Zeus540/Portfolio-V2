@@ -265,11 +265,12 @@ height: 9vw;
 `
 const HeadImg = styled.img`
 position: absolute;
-right: 9.4vw;
-top: -5.2vw;
-width: 11.6vw;
+right: 9.32vw;
+top: -5.1vw;
+width: 11.66vw;
 height: revert;
 z-index: 2;
+
 }
    
 @media (min-width: 1px) and (max-width: 426px) {
@@ -768,7 +769,7 @@ gsap.to('.Illustrator',{
              <Heading3 > I am a</Heading3>
         <Heading2  > 
         <Typical
-              steps={['CREATIVE DEVELOPER', 2500,'UI / UX DESIGNER',2500,'3D ARTIST / MODELER',2500,'ANIMAL LOVER ',2500]}
+              steps={['FULL-STACK DEVELOPER', 2500,'ASPIRING MAKER',2500,'3D ARTIST / MODELER',2500,'ANIMAL LOVER ',2500]}
               loop={Infinity}
               wrapper={"h1"}
             />
