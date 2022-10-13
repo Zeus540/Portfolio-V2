@@ -1,10 +1,10 @@
-import React, { Component, Fragment } from "react";
+import React, {useEffect,useState,useContext} from 'react';
 import styled from "styled-components";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { TextField,MenuItem } from "@mui/material";
 import { Formik } from 'formik';
-
+import { ObjectivesContext } from '../context/Objectives';
 
 const MainHeading = styled.h1`
 font-size: 4vw;
@@ -98,7 +98,7 @@ margin:0px 10px
 `
 
 const Contact = () => {
-
+  const {statMenu,setEmailSent} = useContext(ObjectivesContext)
   let options =
   [
     {
@@ -125,9 +125,10 @@ const Contact = () => {
        initialValues={{ name: '', surname: '' , msg: '',type:''}}
       
        onSubmit={(values, { setSubmitting }) => {
-        alert(JSON.stringify(values, null, 2));
+      
          setTimeout(() => {
-          
+          alert(JSON.stringify(values, null, 2));
+          setEmailSent(true)
            setSubmitting(false);
          }, 400);
        }}

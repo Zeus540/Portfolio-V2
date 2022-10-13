@@ -1,4 +1,4 @@
-import React, {useEffect,useState} from 'react';
+import React, {useEffect,useState,useContext} from 'react';
 import styled from 'styled-components';
 import Body from '../images/mevr.png'
 import ReactTypingEffect from 'react-typing-effect-multiline';
@@ -12,13 +12,13 @@ import Nginx from '../images/nginx.png'
 import Photoshop from '../images/photoshop.png'
 import Mailchimp from '../images/mailchimp.png'
 import Illustrator from '../images/illustrator.png'
-
+import { useSnackbar } from 'notistack';
 import Typical from 'react-typical'
 
 import Cv from '../images/cv.pdf';
 import LinkedIn from '../images/linkedin-in.svg'
 import {gsap} from 'gsap';
-
+import { ObjectivesContext } from '../context/Objectives';
 
 
 
@@ -220,7 +220,7 @@ const RightContainerImg = styled.img`
 height: 30vw;
     width: 30vw;
    position:relative;
-   z-index:5;
+   z-index:4;
 @media (min-width: 1px) and (max-width: 426px) {
   width: 100%;
 
@@ -240,6 +240,9 @@ justify-content: end;
 align-items: end;
 width: 90%;
 margin-top: 40px;
+position: relative;
+bottom: 0px;
+z-index: 4;
 @media (min-width: 1px) and (max-width: 426px) {
   width: 100%;
   margin-top: 0px;
@@ -277,14 +280,93 @@ cursor: pointer;
 
 `
 
+const BuildHolder = styled.div`
+color: white;
+text-align: left;
+position: absolute;
+bottom: 20px;
+z-index: 5;
+right: 0;
+cursor:pointer
+`
+const BuildHolderFlex = styled.div`
+color: white;
+text-align: left;
+display: flex;
 
+`
+
+const BuildNo = styled.div`
+color: #125eac;
+
+`
+const Stats = styled.div`
+cursor: pointer;
+    fill:#125eac ;
+    padding: 10px;
+    color: #e4e4e4;
+    height: 50px;
+    width: 50px;
+    background: #eec100;
+    border-radius: 5px 0px 0px 5px;
+    
+    border-right: 0px;
+`
+
+const StatsHeading = styled.div`
+padding: 10px 20px;
+    padding-bottom: 0px;
+    color: #e4e4e4;
+    font-family: 'Pixel';
+    font-size: 28px;
+`
+const Check = styled.div`
+width:30px;
+fill: gray;
+`
+const CheckComplete = styled.div`
+width:30px;
+fill: #00d400;
+`
+
+const Ach = styled.div`
+padding: 15px;
+background: #20273b;
+margin: 15px;
+color: #e4e4e4;
+border-radius: 5px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+`
+const StatsMenu = styled.div`
+
+background: #125eac;
+
+padding: 0px;
+width: 300px;
+border-radius: 0px 0px 0px 10px;
+border: 2px solid #eec100;
+`
+const StatsMenuHolder = styled.div`
+position: fixed;
+top: 198px;
+right: 0px;
+display: flex;
+z-index: 99;
+transform: translateX(${props => props.statMenu}px);
+transition: 0.5s all linear;
+`
 
 
 
 
 function Page3New() {
+  const { enqueueSnackbar, closeSnackbar } = useSnackbar();
+ const [devMode, setDevMode] = useState()
+const {statMenu,emailSent,setStatMenu,viewLinkedIn,downloadResume,easterEggsFound,viewProjects,setDownloadResume,setViewLinkedIn,setEasterEggsFound,objectivesVal} = useContext(ObjectivesContext)
 
-  
 
 let skills = [
   {
@@ -335,13 +417,93 @@ let skills = [
   },
 ]
 
+let count = 0
+
+const HandleEasterEgg = () =>{
+  count++
+
+  if( count == 3){
+    enqueueSnackbar('Developer Mode Enabled', {
+      variant: "info",
+    });
+    enqueueSnackbar('Easter Egg Found ', {
+      variant: "success",
+    });
+   
+    setEasterEggsFound(easterEggsFound+1)
+    setDevMode(true)
+  }
+
+}
 
 
     return (
   <Root>
+
+<StatsMenuHolder statMenu={statMenu} >
+      <Stats onClick={()=>{statMenu == 300 ? setStatMenu(0) : setStatMenu(300)}}>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M309 106c11.4-7 19-19.7 19-34c0-22.1-17.9-40-40-40s-40 17.9-40 40c0 14.4 7.6 27 19 34L209.7 220.6c-9.1 18.2-32.7 23.4-48.6 10.7L72 160c5-6.7 8-15 8-24c0-22.1-17.9-40-40-40S0 113.9 0 136s17.9 40 40 40c.2 0 .5 0 .7 0L86.4 427.4c5.5 30.4 32 52.6 63 52.6H426.6c30.9 0 57.4-22.1 63-52.6L535.3 176c.2 0 .5 0 .7 0c22.1 0 40-17.9 40-40s-17.9-40-40-40s-40 17.9-40 40c0 9 3 17.3 8 24l-89.1 71.3c-15.9 12.7-39.5 7.5-48.6-10.7L309 106z"/></svg>
+      </Stats>
+      <StatsMenu>
+
+      <StatsHeading>Objectives</StatsHeading>
+     
+     <Ach>
+     <div>Send Email</div>
+  <div>
+  {emailSent ?   <CheckComplete><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+      <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
+      </svg></CheckComplete>:  <Check><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+      <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
+      </svg></Check> }
+      </div>
+   
+   
+     </Ach>
+
+     <Ach>
+     <div>View LinkedIn</div>
+     <div>
+  {viewLinkedIn ?   <CheckComplete><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+      <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
+      </svg></CheckComplete>:  <Check><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+      <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
+      </svg></Check> }
+      </div>
+     </Ach>
+
+     <Ach>
+     <div>Download Resume</div>
+     <div>
+     {downloadResume ?   <CheckComplete><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+      <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
+      </svg></CheckComplete>:  <Check><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+      <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
+      </svg></Check> }
+      </div>
+     </Ach>
+
+
+     <Ach>
+     <div>View 3 or more projects</div>
+     <div>
+     {viewProjects ?   <CheckComplete><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+      <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
+      </svg></CheckComplete>:  <Check><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+      <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
+      </svg></Check> }
+      </div>
+     </Ach>
+
+     <Ach>
+     <div>Easter Eggs Found</div>
+     <div>{easterEggsFound}/2</div>
+     </Ach>
+      </StatsMenu>
+      </StatsMenuHolder>
           <SvgHolder>
         
-            <a href="https://www.linkedin.com/in/zaheerroberts/" target="_blank" >
+            <a href="https://www.linkedin.com/in/zaheerroberts/" target="_blank" onClick={()=>{setViewLinkedIn(true)}}>
           <Svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" >
 <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></Svg>
 </a>
@@ -350,7 +512,8 @@ let skills = [
 <Svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
   <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></Svg>
   </a>
-  <a href={Cv} target="_blank" download >
+
+  <a href={Cv} target="_blank" download onClick={()=>{setDownloadResume(true)}}>
           <Svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
             <path d="M0 64C0 28.65 28.65 0 64 0H229.5C246.5 0 262.7 6.743 274.7 18.75L365.3 109.3C377.3 121.3 384 137.5 384 154.5V448C384 483.3 355.3 512 320 512H64C28.65 512 0 483.3 0 448V64zM336 448V160H256C238.3 160 224 145.7 224 128V48H64C55.16 48 48 55.16 48 64V448C48 456.8 55.16 464 64 464H320C328.8 464 336 456.8 336 448z"/>
           </Svg>
@@ -448,7 +611,16 @@ let skills = [
     </Skills> */}
 
       <ImgHolder >
+     <BuildHolderFlex>
+     <BuildHolder onClick={()=>{HandleEasterEgg()}}>
+      <div>Build Number</div>
+      <BuildNo>TP1A.221005.003</BuildNo>
+      </BuildHolder>
+
+     {devMode && 
       <EditProfile onClick={()=>{console.log("sdasdsd")}}>Edit Profile</EditProfile>
+     }
+     </BuildHolderFlex>
    
       <RightContainerImg src={Body} alt="" />
 

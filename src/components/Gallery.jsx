@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState,useContext } from 'react'
 import styled from 'styled-components'
 import 'react-alice-carousel/lib/alice-carousel.css'
 import Kkwe from '../images/Kkwe.png'
@@ -13,6 +13,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Ghost from '../images/ghost.png'
 import Projects from '../components/Projects.jsx'
+import { ObjectivesContext } from '../context/Objectives';
 
 const Container = styled.div`
 height: 100%;
@@ -249,15 +250,6 @@ cursor:pointer;
 
 
 function Gallery() {
-const [first, setfirst] = useState()
-const [filter, setFilter] = useState("IOT")
-
-  useEffect(() => {
-    AOS.init({
-      duration: 1000
-    })
-  }, [])
-
   let projects = [
     {
       url: "https://sweetleaf.co.za/",
@@ -270,7 +262,8 @@ const [filter, setFilter] = useState("IOT")
       github: "https://github.com/Zeus540/IOTDashboard",
       image: IoT,
       showStack: false,
-      catergory:"IOT"
+      catergory:"IOT",
+      id:1
     },
     {
       url: "https://dash.odinsgate.co.za/",
@@ -283,7 +276,8 @@ const [filter, setFilter] = useState("IOT")
       github: "https://github.com/Zeus540/E-Commerce-Store-NYX",
       image: Dash,
       showStack: false,
-      catergory:"CRM"
+      catergory:"CRM",
+      id:2
     },
     {
       url: "https://odinsgate.co.za/",
@@ -296,7 +290,8 @@ const [filter, setFilter] = useState("IOT")
       github: "https://github.com/Zeus540/IOTDashboard",
       image: IoT,
       showStack: false,
-      catergory:"IOT"
+      catergory:"IOT",
+      id:3
     },
   ]
 
@@ -311,12 +306,45 @@ const [filter, setFilter] = useState("IOT")
     }
   ]
 
-  const [projectsData, setProjectsData] = useState(projects)
-  const [tabsData, setTabsData] = useState(Tabs)
-  const [prevtab, setPrevTab] = useState(tabsData[0])
-  const [ghostP, setGhostP] = useState(-130)
-  const [ghostVis, setGhostVis] = useState("block")
-  const [triggerGhost, setTriggerGhost] = useState(0)
+const [viewedProject, setViewedProject] = useState([])
+const [filter, setFilter] = useState("IOT")
+const [projectsData, setProjectsData] = useState(projects)
+const [tabsData, setTabsData] = useState(Tabs)
+const [prevtab, setPrevTab] = useState(tabsData[0])
+const [ghostP, setGhostP] = useState(-130)
+const [ghostVis, setGhostVis] = useState("block")
+const [triggerGhost, setTriggerGhost] = useState(0)
+const {statMenu,setViewProjects} = useContext(ObjectivesContext)
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000
+    })
+  }, [])
+
+
+  const handleViewProjects = (data) =>{
+
+ 
+    if(viewedProject.find((d)=> d.id == data.id) == undefined ){
+      setViewedProject([...viewedProject,data])
+    }
+
+
+
+  }
+
+
+  useEffect(() => {
+    console.log(viewedProject.length  >= 3 )
+    if(viewedProject.length  == 3 ){
+      setViewProjects(true)
+    }
+  }, [viewedProject])
+  
+
+
+
 
   const toggleStackMenu = (project) => {
     if (project.showStack == false) {
@@ -351,12 +379,10 @@ const [filter, setFilter] = useState("IOT")
   const handleTriggerGhost =()=>{
     
     
-    if(triggerGhost < 2){
-      console.log("handleTriggerGhost")
-      setTriggerGhost(triggerGhost + 1)
-    }
+    if(triggerGhost < 3){
 
-    if(triggerGhost == 2){
+      setTriggerGhost(triggerGhost + 1)
+    }else{
       console.log("right")
       setGhostP(1000)
       setTriggerGhost(0)
@@ -367,6 +393,10 @@ const [filter, setFilter] = useState("IOT")
       }
     }
 
+    if(triggerGhost >= 3){
+     
+    }
+
   }
 
  
@@ -374,7 +404,7 @@ const [filter, setFilter] = useState("IOT")
   return (
     <ContainerOutterClip>
 <ContainerOutter >
-<Projects handleTriggerGhost={handleTriggerGhost}/>
+<Projects setGhostP={setGhostP} ghostP={ghostP}/>
     <Container >
 
       {/* <TabHolder>
@@ -393,7 +423,7 @@ const [filter, setFilter] = useState("IOT")
       {projectsData?.map((project, index) => {
       
         return (
-          <Holder data-aos='slide-up'>
+          <Holder data-aos='slide-up' onClick={()=>{handleViewProjects(project)}}>
 
             <HolderInner>
               <div>

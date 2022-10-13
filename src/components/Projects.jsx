@@ -1,9 +1,10 @@
-import React, {Component} from 'react';
+import React, { useEffect, useState,useContext } from 'react'
 import styled from 'styled-components';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-
+import { ObjectivesContext } from '../context/Objectives';
+import { useSnackbar } from 'notistack';
 
 const Container = styled.div`
 overflow: hidden;
@@ -60,8 +61,42 @@ margin:0px;
 `
 
 const Projects = (props) => {
+  const {easterEggsFound,setEasterEggsFound} = useContext(ObjectivesContext)
+const [found, setFound] = useState(false)
+const { enqueueSnackbar, closeSnackbar } = useSnackbar();
+  let count = 0
+  let count2 = 0
+
+  const HandleEasterEgg = () =>{
+    count++
+
+    if(!found && count == 3){
+      props.setGhostP(940)
+      setFound(true)
+      setEasterEggsFound(easterEggsFound + 1)
+      enqueueSnackbar('Easter Egg Found ', {
+        variant: "success",
+      });
+    }
+    
+    if(found && props.ghostP == 940 ){
+      count2++
+
+      
+    }
+    if(found && count2 == 3 ){
+      count2 = 0
+      props.setGhostP(-130)
+      
+    }
+  
+    
+
+
+  }
+
   return (
-    <Container id="Projects" onClick={()=>{props.handleTriggerGhost()}} >
+    <Container id="Projects" onClick={()=>{HandleEasterEgg()}} >
     <TextHolder>
       {/* <Focus data-aos='slide-up' data-aos-duration="1200"> 0</Focus>
       <Focus data-aos='slide-up' data-aos-duration="1400"> 2</Focus> */}
