@@ -108,11 +108,11 @@ font-size:18px;
 const HeadingT =styled.h1`
 color:#e4e4e4;
 padding: 10px 0px;
-height: 60px;
+height: 30px;
 font-weight: bold;
 font-family:Pixel;
 margin:0px;
-font-size:40px;
+font-size:30px;
 
 @media (min-width: 1px) and (max-width: 426px) {
 
