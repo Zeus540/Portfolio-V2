@@ -23,21 +23,27 @@ background: #125eac;
 padding: 2vw;
 
 @media (min-width: 1px) and (max-width: 426px) {
- 
+  padding: 0px;
   flex-direction: column;
   }
+`
+const ContainerOutterClip = styled.div`
+
+
+
 `
 const ContainerOutter = styled.div`
 height: 100%;
 margin: 0 auto;
 overflow: hidden;
-
+clip-path: polygon(0 0%,50% 0,100% 0%,100% 90%,50% 100%,0 90%);
 position:relative;
 padding: 2vw;
 background: #125eac;
 @media (min-width: 1px) and (max-width: 426px) {
-
-
+  clip-path: polygon(0 0%,50% 0,100% 0%,100% 98%,50% 100%,0 98%);
+  padding:   40px 20px;
+  padding-top: 0px;
   }
 `
 
@@ -94,7 +100,7 @@ flex-direction:column;
 width:100%;
 justify-content: space-between;
 @media (min-width: 1px) and (max-width: 426px) {
-  margin: 8vw 0vw 0.5vw 0vw;
+  
   flex-direction:column;
  }
 `
@@ -109,7 +115,7 @@ font-weight:bolder;
 
 @media (min-width: 1px) and (max-width: 426px) {
   font-size:9vw;
-  margin-bottom:2vw;
+  margin:2vw 0px;
  }
 `
 const Sup = styled.sup`
@@ -117,9 +123,9 @@ const Sup = styled.sup`
 color:#125eac;
 font-family:Pixel;
 font-weight:bolder;
-
+font-size: 1vw;
 @media (min-width: 1px) and (max-width: 426px) {
-
+  font-size: 3.5vw;
 
  }
 `
@@ -142,6 +148,20 @@ font-family:Pixel;
   font-size: 3.5vw;
  }
 `
+const BtnHolder = styled.div`
+font-size:0.7vw;
+color: #20273b;
+font-family:Pixel;
+
+@media (min-width: 1px) and (max-width: 426px) {
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+ }
+`
+
 const HeadingViewCode = styled.button`
 font-size:0.5vw;
 color:#d2d2d2!important;
@@ -156,6 +176,8 @@ border-radius:10px;
 margin-right: 20px
 @media (min-width: 1px) and (max-width: 426px) {
   font-size: 3.5vw;
+  margin-right: 0px; 
+  width: 47%;
  }
 `
 const Anchor = styled.a`
@@ -346,6 +368,7 @@ const [filter, setFilter] = useState("IOT")
  
   
   return (
+    <ContainerOutterClip>
 <ContainerOutter >
 <Projects handleTriggerGhost={handleTriggerGhost}/>
     <Container >
@@ -375,7 +398,7 @@ const [filter, setFilter] = useState("IOT")
              
               <Heading>{project.heading}</Heading>
               </div>
-              <div>
+              <BtnHolder>
               <HeadingViewCode  onClick={() => { toggleStackMenu(project) }}>
                 
                       View Stack
@@ -420,7 +443,7 @@ const [filter, setFilter] = useState("IOT")
                
                   </StackMenu>
                 }
-              </div>
+              </BtnHolder>
 
 
 
@@ -447,6 +470,7 @@ const [filter, setFilter] = useState("IOT")
     </Container>
     <GhostImg src={Ghost} alt="" width="100%" ghostP={ghostP} ghostVis={ghostVis}/>
     </ContainerOutter>
+    </ContainerOutterClip>
   );
 }
 

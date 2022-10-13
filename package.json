@@ -19,6 +19,8 @@
     "react-scroll": "^1.7.15",
     "react-slick": "^0.25.2",
     "react-typical": "^0.1.3",
+    "react-typing-effect": "^2.0.5",
+    "react-typing-effect-multiline": "^2.0.6",
     "slick-carousel": "^1.8.1",
     "styled-components": "^4.4.1"
   },

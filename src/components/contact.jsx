@@ -98,7 +98,7 @@ const Contact = () => {
   [
     {
       id:1,
-      name:"Customer",
+      name:"I am a Customer",
     },
     {
       id:2,
@@ -106,7 +106,7 @@ const Contact = () => {
     },
     {
       id:3,
-      name:"Recruiter",
+      name:"I am a Recruiter",
     }
   ]
 
@@ -146,12 +146,12 @@ const Contact = () => {
           <InputGrp>
       <Input id="outlined-basic"     name="email" label="Email" variant="outlined"  onChange={handleChange}         onBlur={handleBlur}/>
       </InputGrp>
-      <Input id="outlined-basic"     name="surname" label="Surname" variant="outlined"  onChange={handleChange}         onBlur={handleBlur}/>
+      
 
       <Input
           id="outlined-select-currency"
           select
-          label="Select"
+          label="Reason for enquiry"
           name="type"
           onChange={handleChange}
           onBlur={handleBlur}

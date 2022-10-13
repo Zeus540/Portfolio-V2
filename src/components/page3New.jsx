@@ -1,7 +1,7 @@
 import React, {useEffect,useState} from 'react';
 import styled from 'styled-components';
 import Body from '../images/mevr.png'
-
+import ReactTypingEffect from 'react-typing-effect-multiline';
 import Html from '../images/html.png'
 import Jira from '../images/jira.png'
 import Bootstrap from '../images/bootstrap.png'
@@ -59,6 +59,7 @@ font-family:Pixel;
   padding-left: 0vw;
 
 
+
    }
    
 `
@@ -95,6 +96,7 @@ const Heading =styled.h1`
 color:white;
 padding: 10px 0px;
   
+
 font-family:Pixel;
 margin:0px;
 font-size:18px;
@@ -103,6 +105,20 @@ font-size:18px;
  
    }
 `
+const HeadingT =styled.h1`
+color:white;
+padding: 10px 0px;
+height: 60px;
+font-weight: bold;
+font-family:Pixel;
+margin:0px;
+font-size:40px;
+
+@media (min-width: 1px) and (max-width: 426px) {
+
+   }
+`
+
 const Bold =styled.strong`
 color:white;
 font-size:40px;
@@ -142,7 +158,7 @@ font-size:18px;
 color:white;
 font-family:Pixel;
 padding: 10px;
-font-weight:bolder;
+
 @media (min-width: 1px) and (max-width: 426px) {
 
   padding-left: 0px;
@@ -152,7 +168,7 @@ font-weight:bolder;
 const Focus2 =styled.span`
 font-size: 18px;
 color: #d2d2d2;
-font-weight: bold;
+
 padding:10px;
 font-family: Pixel;
 
@@ -253,7 +269,7 @@ color: #125eac;
 
 right: 0;
 padding: 8px 20px;
-background: #16171b;
+background: #16171b00;
 border: #125eac 2px solid;
 border-radius: 10px;
 cursor: pointer;
@@ -261,60 +277,9 @@ cursor: pointer;
 
 `
 
-const Stats = styled.div`
-cursor: pointer;
-fill: #eec100;
-padding: 10px;
-color: white;
-height: 50px;
-width: 50px;
-background: #125eac;
-border-radius: 5px 0px 0px 5px;
-`
 
-const StatsMenu = styled.div`
 
-background: #125eac;
 
-padding: 0px;
-width: 300px;
-border-radius: 0px 0px 0px 10px;
-`
-const StatsMenuHolder = styled.div`
-position: absolute;
-top: 198px;
-right: 0px;
-display: flex;
-z-index: 99;
-transform: translateX(${props => props.statMenu}px);
-transition: 0.5s all linear;
-`
-const Ach = styled.div`
-padding: 15px;
-background: #20273b;
-margin: 15px;
-color: white;
-border-radius: 5px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-
-`
-const StatsHeading = styled.div`
-padding: 10px 20px;
-    padding-bottom: 0px;
-    color: white;
-    font-family: 'Pixel';
-    font-size: 28px;
-`
-const Check = styled.div`
-width:30px;
-fill: gray;
-`
-const CheckComplete = styled.div`
-width:30px;
-fill: #00d400;
-`
 
 
 function Page3New() {
@@ -370,18 +335,13 @@ let skills = [
   },
 ]
 
-const [easterEggsFound, setEasterEggsFound] = useState(0)
-const [statMenu, setStatMenu] = useState(300)
-const [emailSent, setEmailSent] = useState(false)
-const [viewLinkedIn, setViewLinkedIn] = useState(false)
-const [downloadResume, setDownloadResume] = useState(false)
-const [viewProjects, setViewProjects] = useState(false)
+
 
     return (
   <Root>
           <SvgHolder>
         
-            <a href="https://www.linkedin.com/in/zaheerroberts/" target="_blank" onClick={()=>{setViewLinkedIn(true)}}>
+            <a href="https://www.linkedin.com/in/zaheerroberts/" target="_blank" >
           <Svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" >
 <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></Svg>
 </a>
@@ -390,7 +350,7 @@ const [viewProjects, setViewProjects] = useState(false)
 <Svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
   <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></Svg>
   </a>
-  <a href={Cv} target="_blank" download onClick={()=>{setDownloadResume(true)}}>
+  <a href={Cv} target="_blank" download >
           <Svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
             <path d="M0 64C0 28.65 28.65 0 64 0H229.5C246.5 0 262.7 6.743 274.7 18.75L365.3 109.3C377.3 121.3 384 137.5 384 154.5V448C384 483.3 355.3 512 320 512H64C28.65 512 0 483.3 0 448V64zM336 448V160H256C238.3 160 224 145.7 224 128V48H64C55.16 48 48 55.16 48 64V448C48 456.8 55.16 464 64 464H320C328.8 464 336 456.8 336 448z"/>
           </Svg>
@@ -402,13 +362,25 @@ const [viewProjects, setViewProjects] = useState(false)
     
         <FlexC>
 
-      
         <TypicalHolder>
-        <Typical
-              steps={['God dag!', 1500,'Bonjour!',1500,'Konnichiwa!',1500,'Hello!',1500,]}
-              loop={1}
-              wrapper={"h1"}
-            />
+
+    
+        <ReactTypingEffect
+        text={["God dag!", "Bonjour!", "Hi!", "Konnichiwa!", "Hello!"]}
+        cursorRenderer={cursor => <h1 className='none'>{cursor}</h1>}
+        speed={100}
+        eraseSpeed={100}
+        typingDelay={0}
+        displayTextRenderer={(text, i) => {
+          return (
+            <HeadingT >
+           {text}
+            </HeadingT>
+          );
+        }}        
+      />
+    
+       
              <Heading data-aos='slide-up'> my name is <Bold>Zaheer.</Bold></Heading>
         </TypicalHolder>
 
@@ -416,11 +388,22 @@ const [viewProjects, setViewProjects] = useState(false)
         
              <Heading3 > I am a</Heading3>
         <Heading2  > 
-        <Typical
-              steps={['FULL-STACK DEVELOPER', 2500,'ASPIRING MAKER',2500,'3D ARTIST / MODELER',2500,'ANIMAL LOVER ',2500]}
-              loop={Infinity}
-              wrapper={"h1"}
-            />
+        <ReactTypingEffect
+        text={["FULL-STACK DEVELOPER", "ASPIRING MAKER", "3D ARTIST / MODELER", "ANIMAL LOVER"]}
+        cursorRenderer={cursor => <h1 className='none'>{cursor}</h1>}
+        speed={100}
+        eraseSpeed={100}
+        cursorClassName="none"
+        typingDelay={0}
+        displayTextRenderer={(text, i) => {
+          return (
+            <h1>
+           {text}
+            </h1>
+          );
+        }}        
+      />
+     
         </Heading2>
         <Focus2>BASED IN CAPETOWN SOUTHAFRICA...</Focus2>
       
@@ -472,67 +455,7 @@ const [viewProjects, setViewProjects] = useState(false)
       </ImgHolder>
 
       </RightContainer>
-      <StatsMenuHolder statMenu={statMenu} >
-      <Stats onClick={()=>{statMenu == 300 ? setStatMenu(0) : setStatMenu(300)}}>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M309 106c11.4-7 19-19.7 19-34c0-22.1-17.9-40-40-40s-40 17.9-40 40c0 14.4 7.6 27 19 34L209.7 220.6c-9.1 18.2-32.7 23.4-48.6 10.7L72 160c5-6.7 8-15 8-24c0-22.1-17.9-40-40-40S0 113.9 0 136s17.9 40 40 40c.2 0 .5 0 .7 0L86.4 427.4c5.5 30.4 32 52.6 63 52.6H426.6c30.9 0 57.4-22.1 63-52.6L535.3 176c.2 0 .5 0 .7 0c22.1 0 40-17.9 40-40s-17.9-40-40-40s-40 17.9-40 40c0 9 3 17.3 8 24l-89.1 71.3c-15.9 12.7-39.5 7.5-48.6-10.7L309 106z"/></svg>
-      </Stats>
-      <StatsMenu>
-
-      <StatsHeading>Objectives</StatsHeading>
-     
-     <Ach>
-     <div>Send Email</div>
-  <div>
-  {emailSent ?   <CheckComplete><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-      <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
-      </svg></CheckComplete>:  <Check><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-      <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
-      </svg></Check> }
-      </div>
    
-   
-     </Ach>
-
-     <Ach>
-     <div>View LinkedIn</div>
-     <div>
-  {viewLinkedIn ?   <CheckComplete><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-      <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
-      </svg></CheckComplete>:  <Check><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-      <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
-      </svg></Check> }
-      </div>
-     </Ach>
-
-     <Ach>
-     <div>Download Resume</div>
-     <div>
-     {downloadResume ?   <CheckComplete><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-      <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
-      </svg></CheckComplete>:  <Check><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-      <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
-      </svg></Check> }
-      </div>
-     </Ach>
-
-
-     <Ach>
-     <div>View 3 or more projects</div>
-     <div>
-     {viewProjects ?   <CheckComplete><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-      <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
-      </svg></CheckComplete>:  <Check><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-      <path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
-      </svg></Check> }
-      </div>
-     </Ach>
-
-     <Ach>
-     <div>Easter Eggs Found</div>
-     <div>{easterEggsFound}/5</div>
-     </Ach>
-      </StatsMenu>
-      </StatsMenuHolder>
 
    
       </Container>
