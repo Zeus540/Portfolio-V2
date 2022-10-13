@@ -62,10 +62,14 @@ display:none;
 const GhostImg = styled.img`
 width: 300px;
 position: absolute;
-bottom: 17px;
+bottom: 60px;
 
 transform: translateX(${props => props.ghostP}%);
 transition: all 5s linear;
+@media (min-width: 1px) and (max-width: 426px) {
+  top: 98px;
+  width: 190px;
+ }
 `
 
 const Holder = styled.div`
@@ -108,7 +112,7 @@ justify-content: space-between;
 
 const ProjectHeading = styled.h1`
 font-size:80px;
-color:#e3e2e2;
+color:#d2d2d2;
 font-family:Pixel;
 font-weight:bolder;
 
@@ -164,7 +168,7 @@ font-family:Pixel;
 
 const HeadingViewCode = styled.button`
 font-size:0.5vw;
-color:#e3e2e2!important;
+color:#d2d2d2!important;
 font-family:Pixel;
 margin: 30px 0vw 1vw 0vw;
 padding:10px 20px;
@@ -184,7 +188,7 @@ const Anchor = styled.a`
 font-size:0.5vw;
 border-radius:10px;
 
-color:#e3e2e2!important;
+color:#d2d2d2!important;
 @media (min-width: 1px) and (max-width: 426px) {
   font-size: 3.5vw;
  }
@@ -213,7 +217,7 @@ const TabHolder = styled.div`
 display:flex;
 `
 const Tab = styled.button`
-color:#e3e2e2;
+color:#d2d2d2;
 padding:10px 40px;
 border:none;
 background:none;
@@ -231,10 +235,10 @@ padding:10px 60px;
 `;
 const StackMenuHeading = styled.p`
 font-size:0.8vw;
-color:#e3e2e2;
+color:#d2d2d2;
 font-family:Pixel;
 margin: 15px 0vw ;
-color:#e4e4e4;
+color:white;
 cursor:pointer;
 @media (min-width: 1px) and (max-width: 426px) {
   font-size: 3.5vw;
