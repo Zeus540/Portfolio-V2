@@ -13,21 +13,21 @@ import Contact from './components/contact.jsx'
 
 const Stats = styled.div`
 cursor: pointer;
-    fill: #eec100;
+    fill:#125eac ;
     padding: 10px;
-    color: white;
+    color: #e4e4e4;
     height: 50px;
     width: 50px;
-    background: #125eac;
+    background: #eec100;
     border-radius: 5px 0px 0px 5px;
-    border: 2px solid #232d46;
+    
     border-right: 0px;
 `
 
 const StatsHeading = styled.div`
 padding: 10px 20px;
     padding-bottom: 0px;
-    color: white;
+    color: #e4e4e4;
     font-family: 'Pixel';
     font-size: 28px;
 `
@@ -44,7 +44,7 @@ const Ach = styled.div`
 padding: 15px;
 background: #20273b;
 margin: 15px;
-color: white;
+color: #e4e4e4;
 border-radius: 5px;
 display: flex;
 justify-content: space-between;

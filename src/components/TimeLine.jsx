@@ -61,7 +61,7 @@ font-weight:bolder;
 
 const MainHeading =styled.h1`
 font-size: 8vw;
-color:#d2d2d2;
+color:#e3e2e2;
 #2c3d65font-family:Pixel;
 text-align:center;
 font-weight:bolder;

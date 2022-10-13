@@ -18,7 +18,7 @@ overflow:hidden;
 `
 
 const Holder = styled.div`
-color:#d2d2d2;
+color:#e3e2e2;
 font: italic
 #2c3d65font-family:Pixel;
 text-transform:uppercase;
@@ -33,7 +33,7 @@ letter-spacing:5px;
 `
 
 const Heading = styled.h1`
-color:#d2d2d2;
+color:#e3e2e2;
 font: italic
 #2c3d65font-family:Pixel;
 text-transform:uppercase;
@@ -46,12 +46,12 @@ font-size:1.5vw;
      }
 `
 const Anchor = styled.a`
-color:#d2d2d2;
+color:#e3e2e2;
 font: italic
 #2c3d65font-family:Pixel;
 text-transform:uppercase;
 letter-spacing:5px;
-border:5px solid #d2d2d2;
+border:5px solid #e3e2e2;
 background:#3c9a43;
 width: 33.3%;
     text-align: center;

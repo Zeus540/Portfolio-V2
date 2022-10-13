@@ -8,7 +8,7 @@ import { Formik } from 'formik';
 
 const MainHeading = styled.h1`
 font-size: 4vw;
-color:#d2d2d2;
+color:#e3e2e2;
 font-family:Pixel;
 text-align:center;
 font-weight:bolder;
@@ -22,11 +22,15 @@ margin: 40px 0vw;
 
 const Container = styled.div`
 padding: 20px;
+display: flex;
+flex-direction: column;
+align-items: center;
+
 
 `;
 
 const Btn = styled.button`
-color: white;
+color: #e4e4e4;
 background: #125eac;
 border-radius: 10px;
 padding: 10px 20px;
@@ -41,15 +45,16 @@ const Form = styled.form`
 padding: 20px;
     display: flex;
     flex-direction: column;
-    background: white;
+    background: #e4e4e4;
     border-radius: 10px;
     margin: 60px;
 margin-bottom: 0px;
-width: calc(100% / 4);
+width: calc(100% / 2.5);
 align-items: baseline;
 @media (min-width: 1px) and (max-width: 426px) {
   margin: 15px 0vw;
   width: unset;
+  padding: 10px;
  }
 `;
 
@@ -85,7 +90,7 @@ const MainHeadingContainer = styled.div`
 `;
 
 const Svg = styled.svg`
-fill:white;
+fill:#e4e4e4;
 width:30px;
 text-align:right,
 cursor:pointer;
@@ -98,7 +103,7 @@ const Contact = () => {
   [
     {
       id:1,
-      name:"I am a Customer",
+      name:"I need a Website",
     },
     {
       id:2,

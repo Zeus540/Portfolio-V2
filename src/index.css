@@ -194,9 +194,9 @@ a{
     width: 0;
     z-index: 1;
     right: 31px;
-    border: medium solid #d2d2d2;
+    border: medium solid #e3e2e2;
     border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent #d2d2d2;
+    border-color: transparent transparent transparent #e3e2e2;
   }
   .leftImp::before {
     content: " ";
@@ -219,9 +219,9 @@ a{
     width: 0;
     z-index: 1;
     left: 31px;
-    border: medium solid #d2d2d2;
+    border: medium solid #e3e2e2;
     border-width: 10px 10px 10px 0;
-    border-color: transparent #d2d2d2 transparent transparent;
+    border-color: transparent #e3e2e2 transparent transparent;
   }
   
   /* Fix the circle for containers on the right side */
@@ -232,7 +232,7 @@ a{
   /* The actual content */
   .content {
     padding: 20px 30px;
-    background-color: #d2d2d2;
+    background-color: #e3e2e2;
     position: relative;
   
   }
@@ -256,7 +256,7 @@ a{
     left: 61px;
     border: medium solid limewhite;
     border-width: 10px 10px 10px 0;
-    border-color: transparent #d2d2d2 transparent transparent;
+    border-color: transparent #e3e2e2 transparent transparent;
     }
     .leftContainer::before {
       left: 61px;

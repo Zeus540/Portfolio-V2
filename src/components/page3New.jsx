@@ -53,7 +53,7 @@ position: relative;
 font-family: arial;
 padding: 10px;
 font-size: 2vw;
-color:white;
+color:#e4e4e4;
 font-family:Pixel;
 @media (min-width: 1px) and (max-width: 426px) {
   padding-left: 0vw;
@@ -93,7 +93,7 @@ padding: 20px 0px;
 `
 
 const Heading =styled.h1`
-color:white;
+color:#e4e4e4;
 padding: 10px 0px;
   
 
@@ -106,7 +106,7 @@ font-size:18px;
    }
 `
 const HeadingT =styled.h1`
-color:white;
+color:#e4e4e4;
 padding: 10px 0px;
 height: 60px;
 font-weight: bold;
@@ -120,7 +120,7 @@ font-size:40px;
 `
 
 const Bold =styled.strong`
-color:white;
+color:#e4e4e4;
 font-size:40px;
 font-weight:bolder;
 
@@ -128,7 +128,7 @@ font-weight:bolder;
 
 const Heading2 =styled.div`
 font-size:120px;
-color:white;
+color:#e4e4e4;
 font-family:Pixel;
 margin:0vw 0%;
 margin-bottom:0;
@@ -155,7 +155,7 @@ min-height: 255px;
 
 const Heading3 =styled.h1`
 font-size:18px;
-color:white;
+color:#e4e4e4;
 font-family:Pixel;
 padding: 10px;
 
@@ -167,7 +167,7 @@ padding: 10px;
 
 const Focus2 =styled.span`
 font-size: 18px;
-color: #d2d2d2;
+color: #e3e2e2;
 
 padding:10px;
 font-family: Pixel;
@@ -208,7 +208,7 @@ right: 0;
 const Skill = styled.svg`
 max-width: calc(100% / 20 - 10px);
 margin-right: 30px;
-fill:white;
+fill:#e4e4e4;
 @media (min-width: 1px) and (max-width: 426px) {
   min-width: calc(100% / 8 - 10px);
   margin-right: 30px;
@@ -248,7 +248,7 @@ margin-top: 40px;
 `
 
 const Svg = styled.svg`
-fill:white;
+fill:#e4e4e4;
 width:25px;
 text-align:right,
 cursor:pointer;

@@ -11,9 +11,9 @@
   text-align: center;
   color:#20273b;
  font-family:Pixel;
-
+ padding: 20px;
  margin-top: 80px;
- padding: 40px;
+
 
       @media (min-width: 1px) and (max-width: 426px) {
         
@@ -24,11 +24,11 @@
   
     const Copyright = styled.p`
         
-          font-weight:bold;
+
           color: #dfdfdf;
           text-align: center;
-          padding: 40px 0px;
-    padding-bottom: 0px;
+          padding: 0px 0px;
+
         @media (min-width: 1px) and (max-width: 426px) {
           font-size:2.2vw;
           }
@@ -45,8 +45,8 @@
       return (
         
         <Container  >
-          <img src={Trident} width="70px"/>
-      <Copyright >ALL RIGHT RESERVED COPYRIGHT &copy; 2020</Copyright>
+          {/* <img src={Trident} width="70px"/> */}
+      <Copyright >ALL RIGHT RESERVED COPYRIGHT &copy; 2022</Copyright>
      
         </Container>
     );

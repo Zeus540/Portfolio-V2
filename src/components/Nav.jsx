@@ -24,7 +24,7 @@ letter-spacing:5px;
 `
 
 const Heading = styled.h1`
-color:#d2d2d2;
+color:#e3e2e2;
 font: italic
 #2c3d65font-family:Pixel;
 text-transform:uppercase;
