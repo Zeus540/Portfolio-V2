@@ -11,42 +11,79 @@ import Rot from '../images/Rot.png'
 import Nike from '../images/Nike.png'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Ghost from '../images/ghost.png'
+import Projects from '../components/Projects.jsx'
 
 const Container = styled.div`
 height: 100%;
-margin:0 auto;
-overflow:hidden;
-width: 80vw;
-margin-bottom:5vw;
+margin: 0 auto;
+overflow: hidden;
+display: flex;
+background: #125eac;
+padding: 2vw;
+
 @media (min-width: 1px) and (max-width: 426px) {
-  margin-bottom:20vw;
-  width: 80vw;
+ 
+  flex-direction: column;
   }
 `
+const ContainerOutter = styled.div`
+height: 100%;
+margin: 0 auto;
+overflow: hidden;
+
+position:relative;
+padding: 2vw;
+background: #125eac;
+@media (min-width: 1px) and (max-width: 426px) {
+
+
+  }
+`
+
 const ImgHolder = styled.div`
 width:60vw;
-max-height: 453px;
+border-radius:10px;
 transition: all 0.2s ease-in-out;
+display:none;
 @media (min-width: 1px) and (max-width: 426px) {
   width:100%;
   
  }
 `
 
+
+const GhostImg = styled.img`
+width: 300px;
+position: absolute;
+bottom: 17px;
+
+transform: translateX(${props => props.ghostP}%);
+transition: all 5s linear;
+`
+
 const Holder = styled.div`
 display:flex;
-margin: 0px auto;
-padding-bottom: 20px;
-flex-direction:row;
 
-height: inherit;
-margin: 5vw 0vw;
+padding: 40px;
+flex-direction:row;
+height: 100%;
+
+overflow: hidden;
+
+width: calc(100% / 3 - 40px);
+background:  #20273b;
+min-height: 348px;
+margin: 20px ;
+border-radius: 10px;
 
 @media (min-width: 1px) and (max-width: 426px) {
  width:100%;
  display: flex;
  flex-direction: column;
- margin: 0vw 0vw;
+ margin: 15px 0vw;
+ padding: 20px;
+ min-height: unset;
  }
 `
 
@@ -55,6 +92,7 @@ display:flex;
 padding-bottom: 0px;
 flex-direction:column;
 width:100%;
+justify-content: space-between;
 @media (min-width: 1px) and (max-width: 426px) {
   margin: 8vw 0vw 0.5vw 0vw;
   flex-direction:column;
@@ -63,12 +101,12 @@ width:100%;
 
 
 const ProjectHeading = styled.h1`
-font-size:6vw;
-color:white;
-font-family:arial;
+font-size:80px;
+color:#d2d2d2;
+font-family:Pixel;
 font-weight:bolder;
-width:85%;
-cursor: pointer;
+
+
 @media (min-width: 1px) and (max-width: 426px) {
   font-size:9vw;
   margin-bottom:2vw;
@@ -76,8 +114,8 @@ cursor: pointer;
 `
 const Sup = styled.sup`
 
-color:#75d771;
-font-family:arial;
+color:#125eac;
+font-family:Pixel;
 font-weight:bolder;
 
 @media (min-width: 1px) and (max-width: 426px) {
@@ -88,8 +126,8 @@ font-weight:bolder;
 
 const Heading = styled.h1`
 font-size:1vw;
-color:white;
-font-family:arial;
+color:#125eac;
+font-family:Pixel;
 
 @media (min-width: 1px) and (max-width: 426px) {
   font-size: 3.5vw;
@@ -97,35 +135,41 @@ font-family:arial;
 `
 const HeadingF = styled.h1`
 font-size:0.7vw;
-color:white;
-font-family:arial;
-margin: 8px 0px;
+color: #20273b;
+font-family:Pixel;
+
 @media (min-width: 1px) and (max-width: 426px) {
   font-size: 3.5vw;
  }
 `
 const HeadingViewCode = styled.button`
 font-size:0.5vw;
-color:white!important;
-font-family:arial;
-margin: 1vw 0vw 1vw 0vw;
-padding:10px;
+color:#d2d2d2!important;
+font-family:Pixel;
+margin: 30px 0vw 1vw 0vw;
+padding:10px 20px;
 border:none;
-background-color: #75d771;
+cursor:pointer;
+margin-bottom: 0px;
+background:#125eac;
+border-radius:10px;
+margin-right: 20px
 @media (min-width: 1px) and (max-width: 426px) {
   font-size: 3.5vw;
  }
 `
 const Anchor = styled.a`
 font-size:0.5vw;
-color:white!important;
+border-radius:10px;
+
+color:#d2d2d2!important;
 @media (min-width: 1px) and (max-width: 426px) {
   font-size: 3.5vw;
  }
 `
 const Img = styled.img`
 width:100%;
-
+border-radius:10px;
 @media (min-width: 1px) and (max-width: 426px) {
   margin-top:5vw; 
   width:100%;
@@ -135,37 +179,40 @@ width:100%;
 
 const StackMenu = styled.div`
 width:100%;
-height:100%;
-color:red;
+
+
 line-height:22px;
-margin: 0.5vw 0vw 0.5vw 0vw;
+background: #dfdfdf;
+border-radius:10px;
+padding:20px;
+margin: 30px 0vw 0vw 0vw;
 `
 const TabHolder = styled.div`
 display:flex;
 `
 const Tab = styled.button`
-color:white;
+color:#d2d2d2;
 padding:10px 40px;
 border:none;
 background:none;
 cursor:pointer;
 transition: padding 0.5s ease;
 &:hover {
-  background-color: #75d771;
+  background-color: #2c3d65;
   padding:10px 60px;
 }
 `
 const ActiveTab = styled(Tab)`
-background-color: #75d771;
+background-color: #2c3d65;
 padding:10px 60px;
 
 `;
 const StackMenuHeading = styled.p`
 font-size:0.8vw;
-color:white;
-font-family:arial;
+color:#d2d2d2;
+font-family:Pixel;
 margin: 15px 0vw ;
-color:#75d771;
+color:white;
 cursor:pointer;
 @media (min-width: 1px) and (max-width: 426px) {
   font-size: 3.5vw;
@@ -187,8 +234,34 @@ const [filter, setFilter] = useState("IOT")
 
   let projects = [
     {
+      url: "https://sweetleaf.co.za/",
+      sup: "IOT - AUTOMATION",
+      ProjectHeading: "SWEET LEAF",
+      heading: "GROW JOURNAL",
+      frontend: "REACT.JS - CHART.JS - STYLED COMPONENTS - AXIOS ",
+      backend: "MYSQL - NODE.JS - EXPRESS.JS - PYTHON",
+      hardware: "RASPBERRY PI 3",
+      github: "https://github.com/Zeus540/IOTDashboard",
+      image: IoT,
+      showStack: false,
+      catergory:"IOT"
+    },
+    {
+      url: "https://dash.odinsgate.co.za/",
+      sup: "CRM - OPEN SOURCE",
+      ProjectHeading: "NEXT",
+      heading: "CRM SYSTEM",
+      frontend: "REACT.JS - CHART.JS - STYLED COMPONENTS - AXIOS ",
+      backend: "MYSQL - NODE.JS - EXPRESS.JS",
+      hardware: null,
+      github: "https://github.com/Zeus540/E-Commerce-Store-NYX",
+      image: Dash,
+      showStack: false,
+      catergory:"CRM"
+    },
+    {
       url: "https://odinsgate.co.za/",
-      sup: "IOT",
+      sup: "IOT - AUTOMATION - OPEN SOURCE",
       ProjectHeading: "SMART PLANT",
       heading: "IOT BASED PLANT MONITOR",
       frontend: "REACT.JS - CHART.JS - STYLED COMPONENTS - AXIOS ",
@@ -199,19 +272,6 @@ const [filter, setFilter] = useState("IOT")
       showStack: false,
       catergory:"IOT"
     },
-    {
-      url: "https://dash.odinsgate.co.za/",
-      sup: "CRM",
-      ProjectHeading: "NEXT",
-      heading: "CRM SYSTEM",
-      frontend: "REACT.JS - CHART.JS - STYLED COMPONENTS - AXIOS ",
-      backend: "MYSQL - NODE.JS - EXPRESS.JS",
-      hardware: null,
-      github: "https://github.com/Zeus540/E-Commerce-Store-NYX",
-      image: Dash,
-      showStack: false,
-      catergory:"CRM"
-    }
   ]
 
   let Tabs = [
@@ -228,6 +288,9 @@ const [filter, setFilter] = useState("IOT")
   const [projectsData, setProjectsData] = useState(projects)
   const [tabsData, setTabsData] = useState(Tabs)
   const [prevtab, setPrevTab] = useState(tabsData[0])
+  const [ghostP, setGhostP] = useState(-130)
+  const [ghostVis, setGhostVis] = useState("block")
+  const [triggerGhost, setTriggerGhost] = useState(0)
 
   const toggleStackMenu = (project) => {
     if (project.showStack == false) {
@@ -259,11 +322,35 @@ const [filter, setFilter] = useState("IOT")
   }
 
 
-  return (
+  const handleTriggerGhost =()=>{
+    
+    
+    if(triggerGhost < 2){
+      console.log("handleTriggerGhost")
+      setTriggerGhost(triggerGhost + 1)
+    }
 
+    if(triggerGhost == 2){
+      console.log("right")
+      setGhostP(1000)
+      setTriggerGhost(0)
+      
+      if(ghostP == 1000){
+        setGhostP(-130)
+      setTriggerGhost(0)
+      }
+    }
+
+  }
+
+ 
+  
+  return (
+<ContainerOutter >
+<Projects handleTriggerGhost={handleTriggerGhost}/>
     <Container >
 
-      <TabHolder>
+      {/* <TabHolder>
       {tabsData.map((tab,index)=>{
         return(
         <>
@@ -275,48 +362,62 @@ const [filter, setFilter] = useState("IOT")
    
     
 
-      </TabHolder>
-      {projectsData?.filter((p)=>{
-          if(filter == null){
-            return projectsData
-          }else{
-            return (
-              p.catergory === filter
-            )
-         
-          }
-      }).map((project, index) => {
+      </TabHolder> */}
+      {projectsData?.map((project, index) => {
       
         return (
           <Holder data-aos='slide-up'>
 
             <HolderInner>
-              <a href={project.url} target="_blank" rel="noopener noreferrer">
-                <span><Sup>{project.sup}</Sup><ProjectHeading  >{project.ProjectHeading}</ProjectHeading> </span>
-              </a>
-              <Heading>{project.heading}</Heading>
               <div>
-                <StackMenuHeading onClick={() => { toggleStackMenu(project) }}>View Stack</StackMenuHeading>
+  
+                <span><Sup>{project.sup}</Sup><ProjectHeading  >{project.ProjectHeading}</ProjectHeading> </span>
+             
+              <Heading>{project.heading}</Heading>
+              </div>
+              <div>
+              <HeadingViewCode  onClick={() => { toggleStackMenu(project) }}>
+                
+                      View Stack
+                 
+                    </HeadingViewCode>
+
+                
+
+              <HeadingViewCode  >
+                      <Anchor href={project.github} target="_blank" rel="noopener noreferrer">
+                        VIEW CODE
+                      </Anchor>
+                    </HeadingViewCode>
+
+                    <HeadingViewCode  >
+
+                  <Anchor href={project.url} target="_blank" rel="noopener noreferrer">
+                  Visit Site
+                  </Anchor>
+
+
+                  </HeadingViewCode>
 
                 {project?.showStack &&
                   <StackMenu>
                     <Sup>Front-End</Sup>
                     <HeadingF>{project.frontend}</HeadingF>
+                    <br/>
+                  
                     <Sup>Back-End</Sup>
+                    
                     <HeadingF  >{project.backend}</HeadingF>
                     {project.hardware !== null
                       && 
                       <>
+                        <br/>
                        <Sup>Hardware</Sup>
                     <HeadingF  >{project.hardware}</HeadingF>
                       </>
                     }
                    
-                    <HeadingViewCode  >
-                      <Anchor href={project.github} target="_blank" rel="noopener noreferrer">
-                        VIEW CODE
-                      </Anchor>
-                    </HeadingViewCode>
+               
                   </StackMenu>
                 }
               </div>
@@ -324,22 +425,28 @@ const [filter, setFilter] = useState("IOT")
 
 
             </HolderInner>
-
+      
+            
             <ImgHolder>
+
+       
               <a href={project.url} target="_blank" rel="noopener noreferrer">
-                <Img src={project.image} alt="" />
+                <Img src={project.image} alt="" width="100%"/>
               </a>
             </ImgHolder>
 
 
           </Holder>
+          
         )
       })}
-
+   
 
 
 
     </Container>
+    <GhostImg src={Ghost} alt="" width="100%" ghostP={ghostP} ghostVis={ghostVis}/>
+    </ContainerOutter>
   );
 }
 

@@ -29,7 +29,7 @@
   color:black;
   letter-spacing: 1px;
   line-height:1.5vw;
-  font-family:arial;
+  #2c3d65font-family:Pixel;
   margin:1vw 0% 1vw 0%;
   @media (min-width: 1px) and (max-width: 426px) {
     font-size: 4vw;
@@ -51,7 +51,7 @@
   const Heading =styled.h1`
 font-size:2vw;
 color:black;
-font-family:arial;
+#2c3d65font-family:Pixel;
 
 font-weight:bolder;
 @media (min-width: 1px) and (max-width: 426px) {
@@ -61,8 +61,8 @@ font-weight:bolder;
 
 const MainHeading =styled.h1`
 font-size: 8vw;
-color:white;
-font-family:arial;
+color:#d2d2d2;
+#2c3d65font-family:Pixel;
 text-align:center;
 font-weight:bolder;
 overflow:hidden

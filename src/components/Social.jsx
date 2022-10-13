@@ -18,9 +18,9 @@ overflow:hidden;
 `
 
 const Holder = styled.div`
-color:white;
+color:#d2d2d2;
 font: italic
-font-family:arial;
+#2c3d65font-family:Pixel;
 text-transform:uppercase;
 letter-spacing:5px;
 
@@ -33,9 +33,9 @@ letter-spacing:5px;
 `
 
 const Heading = styled.h1`
-color:white;
+color:#d2d2d2;
 font: italic
-font-family:arial;
+#2c3d65font-family:Pixel;
 text-transform:uppercase;
 letter-spacing:5px;
 font-size:1.5vw;
@@ -46,12 +46,13 @@ font-size:1.5vw;
      }
 `
 const Anchor = styled.a`
-color:white;
+color:#d2d2d2;
 font: italic
-font-family:arial;
+#2c3d65font-family:Pixel;
 text-transform:uppercase;
 letter-spacing:5px;
-border:2px solid white;
+border:5px solid #d2d2d2;
+background:#3c9a43;
 width: 33.3%;
     text-align: center;
     @media (min-width: 1px) and (max-width: 426px) {

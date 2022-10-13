@@ -7,12 +7,12 @@ import 'aos/dist/aos.css';
 
 const Container = styled.div`
 overflow: hidden;
-margin: 20vw 0vw 20vw 0vw;
-
+padding: 0px 0px;
+cursor:pointer;
 @media (min-width: 1px) and (max-width: 426px) {
  flex-direction:column
  margin: 0px;
-margin:40vw 0vw;
+margin:40px 0vw;
 }
  @media (min-width: 427px) and (max-width: 768px) {
  
@@ -26,13 +26,13 @@ margin:40vw 0vw;
 
 
 const Heading2 =styled.h1`
-font-size:6vw;
-color:white;
-font-family:arial;
+font-size:4vw;
+color:#dfdfdf;
+#2c3d65font-family:Pixel;
 
 font-weight:bolder;
 @media (min-width: 1px) and (max-width: 426px) {
-  font-size:7vw;
+  font-size:10vw;
   }
 `
 
@@ -49,39 +49,32 @@ justify-content:center;
 `
 
 const Focus =styled.h1`
-font-size:15vw;
-color:#75d771;
+font-size:5vw;
+color:#2c3d65;
 margin:0px;
-font-family:arial;
+#2c3d65font-family:Pixel;
 @media (min-width: 1px) and (max-width: 426px) {
   font-size: 27vw;
   }
 
 `
 
-
-class Projects extends Component {
-  componentDidMount(){
-    AOS.init({
-      duration : 1000
-    })
-  }
-render() {
- 
-    return (
-      
-      <Container id="Projects">
-        <TextHolder>
-          <Focus data-aos='slide-up' data-aos-duration="1200"> 0</Focus>
-          <Focus data-aos='slide-up' data-aos-duration="1400"> 2</Focus>
-  <Heading2  data-aos='slide-up' data-aos-duration="1000">PROJECTS</Heading2>
-
-  </TextHolder>
-
-
-      </Container>
-  );
-  }
+const Projects = (props) => {
+  return (
+    <Container id="Projects" onClick={()=>{props.handleTriggerGhost()}} >
+    <TextHolder>
+      {/* <Focus data-aos='slide-up' data-aos-duration="1200"> 0</Focus>
+      <Focus data-aos='slide-up' data-aos-duration="1400"> 2</Focus> */}
+    <Heading2  >PROJECTS</Heading2>
+    
+    </TextHolder>
+    
+    
+    </Container>
+  )
 }
 
-export default Projects;
+export default Projects
+
+
+

@@ -17,16 +17,16 @@ padding-bottom:2vw;
 const Holder = styled.div`
 overflow:hidden
 font: italic
-font-family:arial;
+#2c3d65font-family:Pixel;
 text-transform:uppercase;
 letter-spacing:5px;
 
 `
 
 const Heading = styled.h1`
-color:white;
+color:#d2d2d2;
 font: italic
-font-family:arial;
+#2c3d65font-family:Pixel;
 text-transform:uppercase;
 letter-spacing:5px;
 font-size:1.5vw;
@@ -36,9 +36,9 @@ font-size:1.5vw;
 `
 
 const Heading2 = styled.h1`
-color:#75d771;
+color:#2c3d65;
 font: italic
-font-family:arial;
+#2c3d65font-family:Pixel;
 text-transform:uppercase;
 letter-spacing:5px;
 font-size:1.5vw;
