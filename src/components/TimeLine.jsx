@@ -60,16 +60,16 @@ font-weight:bolder;
 `
 
 const MainHeading =styled.h1`
-font-size: 8vw;
+font-size: 4vw;
 color:#e3e2e2;
 #2c3d65font-family:Pixel;
 text-align:center;
 font-weight:bolder;
 overflow:hidden
-    margin: 15vw 0% 15vw 0%;
+    margin: 60px;
 @media (min-width: 1px) and (max-width: 426px) {
   font-size: 10vw;
-  margin: 15vw 0% 15vw 0%;
+  margin: 40px;
    }
 `
 
@@ -81,7 +81,42 @@ const MainHeadingContainer = styled.div`
         
         }
   `
+  const Card = styled.div`
+  max-width: calc(100% / 4 - 40px);
+  width: 100%;
+  margin: 20px;
+  background: #125eac;
+  padding: 20px;
+  display: flex;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+      @media (min-width: 1px) and (max-width: 426px) {
+        max-width: calc(100% / 1 );
+        
+        }
+  `
 
+  const CardHolder = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap:wrap;
+  padding:0px 80px,
+  @media (min-width: 1px) and (max-width: 426px) {
+    flex-direction: column;
+    padding:0px 0px,
+    }
+  `
+  const CardInner = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align:center
+  `
+  
+  const CardImg = styled.img`
+  width: 220px;
+  `
+  
   class TimeLine extends Component {
     componentDidMount(){
       AOS.init({
@@ -93,11 +128,30 @@ const MainHeadingContainer = styled.div`
       return (
         <>
         <MainHeadingContainer>
-          <MainHeading data-aos='slide-up'>HIGHLIGHTS</MainHeading>
+          <MainHeading data-aos='slide-up'>TRUSTED BY</MainHeading>
           </MainHeadingContainer>
-        <Container >
+      
           
-        <div className="timeline" >
+          <CardHolder>
+
+          <Card>
+       <CardInner>
+       <CardImg src={Hyperboliq} width="100%"/>
+          {/* <div>Hyperboliq</div> */}
+       </CardInner>
+          </Card>
+
+          <Card>
+          <CardImg src={Liqourice} width="100%"/>
+          </Card>
+
+          <Card>
+          <CardImg src={Usn} width="100%"/>
+          </Card>
+          
+     
+          </CardHolder>
+        {/* <div className="timeline" >
 
         <div className="container leftContainer leftImp" data-aos='slide-up'>
       <div className="content Green">
@@ -215,9 +269,9 @@ const MainHeadingContainer = styled.div`
         <Para>GRADUATED COLLEGE</Para>
       </div>
     </div>
-  </div>
+  </div> */}
 
-        </Container>
+       
 
        </> 
     );

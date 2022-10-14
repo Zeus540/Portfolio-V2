@@ -73,10 +73,11 @@ const { enqueueSnackbar, closeSnackbar } = useSnackbar();
     if(!found && count == 3){
       props.setGhostP(940)
       setFound(true)
-      setEasterEggsFound(easterEggsFound + 1)
-      enqueueSnackbar('Easter Egg Found ', {
+ 
+      enqueueSnackbar(`${easterEggsFound+1} Easter Egg Found `, {
         variant: "success",
       });
+      setEasterEggsFound(easterEggsFound + 1)
     }
     
     if(found && props.ghostP == 940 ){

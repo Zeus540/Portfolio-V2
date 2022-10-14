@@ -7,7 +7,7 @@ import { Formik } from "formik";
 import { ObjectivesContext } from "../context/Objectives";
 import axios from "axios";
 import * as Yup from "yup";
-
+import { useSnackbar } from 'notistack';
 const MainHeading = styled.h1`
 font-size: 4vw;
 color:#e3e2e2;
@@ -106,6 +106,7 @@ const Error = styled.p`
 
 const Contact = () => {
   const { statMenu, setEmailSent } = useContext(ObjectivesContext);
+  const { enqueueSnackbar, closeSnackbar } = useSnackbar();
   let options = [
     {
       id: 1,
@@ -128,6 +129,9 @@ const Contact = () => {
         console.log(response);
         if (response.data[0].statusCode == 202) {
           setEmailSent(true);
+          enqueueSnackbar(`Your email has been sent`, {
+            variant: "success",
+          });
         }
       })
       .catch((err) => {

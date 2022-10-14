@@ -19,6 +19,7 @@
     "react-scripts": "3.2.0",
     "react-scroll": "^1.7.15",
     "react-slick": "^0.25.2",
+    "react-spinners": "^0.13.6",
     "react-typing-effect-multiline": "^2.0.6",
     "slick-carousel": "^1.8.1",
     "styled-components": "^4.4.1",

@@ -284,7 +284,7 @@ const BuildHolder = styled.div`
 color: white;
 text-align: left;
 position: absolute;
-bottom: 20px;
+top: 20px;
 z-index: 5;
 right: 0;
 cursor:pointer
@@ -425,7 +425,7 @@ const HandleEasterEgg = () =>{
     enqueueSnackbar('Developer Mode Enabled', {
       variant: "info",
     });
-    enqueueSnackbar('Easter Egg Found ', {
+    enqueueSnackbar(`${easterEggsFound+1} Easter Egg Found `, {
       variant: "success",
     });
    
@@ -551,7 +551,7 @@ const HandleEasterEgg = () =>{
              <Heading3 > I am a</Heading3>
         <Heading2  > 
         <ReactTypingEffect
-        text={["FULL-STACK DEVELOPER", "ASPIRING MAKER", "3D ARTIST / MODELER", "ANIMAL LOVER"]}
+        text={["FULL-STACK DEVELOPER", "ASPIRING MAKER", "3D ARTIST / MODELER","VR ENTHUSIAST", "ANIMAL LOVER"]}
         cursorRenderer={cursor => <h1 className='none'>{cursor}</h1>}
         speed={100}
         eraseSpeed={100}
@@ -616,9 +616,9 @@ const HandleEasterEgg = () =>{
       <BuildNo>TP1A.221005.003</BuildNo>
       </BuildHolder>
 
-     {devMode && 
+     {/* {devMode && 
       <EditProfile onClick={()=>{console.log("sdasdsd")}}>Edit Profile</EditProfile>
-     }
+     } */}
      </BuildHolderFlex>
    
       <RightContainerImg src={Body} alt="" />
