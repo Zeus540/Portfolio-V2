@@ -13,7 +13,7 @@ import Photoshop from '../images/photoshop.png'
 import Mailchimp from '../images/mailchimp.png'
 import Illustrator from '../images/illustrator.png'
 import { useSnackbar } from 'notistack';
-import Typical from 'react-typical'
+
 
 import Cv from '../images/cv.pdf';
 import LinkedIn from '../images/linkedin-in.svg'
