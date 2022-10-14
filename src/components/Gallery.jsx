@@ -1,6 +1,6 @@
 import React, { useEffect, useState,useContext } from 'react'
 import styled from 'styled-components'
-import 'react-alice-carousel/lib/alice-carousel.css'
+
 import Kkwe from '../images/Kkwe.png'
 import IoT from '../images/iot.gif'
 import Dash from '../images/dash.gif'
