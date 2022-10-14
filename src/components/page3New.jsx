@@ -302,15 +302,14 @@ color: #125eac;
 `
 const Stats = styled.div`
 cursor: pointer;
-    fill:#125eac ;
+    fill:#eec100;
     padding: 10px;
     color: #e4e4e4;
     height: 50px;
     width: 50px;
-    background: #eec100;
+    background:#263b76;
     border-radius: 5px 0px 0px 5px;
-    
-    border-right: 0px;
+
 `
 
 const StatsHeading = styled.div`
@@ -330,10 +329,10 @@ fill: #00d400;
 `
 
 const Ach = styled.div`
-padding: 15px;
-background: #20273b;
+padding: 10px 15px;
+background: #dfdfdf;
 margin: 15px;
-color: #e4e4e4;
+color: #141f3e;
 border-radius: 5px;
 display: flex;
 justify-content: space-between;
@@ -342,16 +341,16 @@ align-items: center;
 `
 const StatsMenu = styled.div`
 
-background: #125eac;
+background: #263b76;
 
 padding: 0px;
 width: 300px;
 border-radius: 0px 0px 0px 10px;
-border: 2px solid #eec100;
+
 `
 const StatsMenuHolder = styled.div`
 position: fixed;
-top: 198px;
+top: 120px;
 right: 0px;
 display: flex;
 z-index: 99;
