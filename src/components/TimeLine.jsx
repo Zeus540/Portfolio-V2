@@ -5,6 +5,8 @@
   import Liqourice from '../images/liquorice.png';
   import Kkwe from '../images/kkwel.png';
   import Hyperboliq from '../images/hyperboliq.png';
+  import MDH from '../images/MDH.png';
+  
   import Ola from '../images/ola.png';
   import Tribeca from '../images/tribeca.png';
   import Usn from '../images/usn.png';
@@ -133,14 +135,19 @@ const MainHeadingContainer = styled.div`
       
           
           <CardHolder>
-
+          <Card>
+          <CardImg src={MDH} width="100%"/>
+          </Card>
+          
           <Card>
        <CardInner>
        <CardImg src={Hyperboliq} width="100%"/>
-          {/* <div>Hyperboliq</div> */}
        </CardInner>
           </Card>
 
+
+          
+          
           <Card>
           <CardImg src={Liqourice} width="100%"/>
           </Card>
