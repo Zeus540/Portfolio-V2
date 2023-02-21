@@ -210,7 +210,7 @@ max-width: calc(100% / 20 - 10px);
 margin-right: 30px;
 fill:#e4e4e4;
 @media (min-width: 1px) and (max-width: 426px) {
-    width: calc(100% / 4 - 30px);
+    width: calc(100% / 5 - 30px);
     max-width:unset;
     margin-right: 15px;
     margin-bottom: 30px;
